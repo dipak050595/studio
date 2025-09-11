@@ -2,51 +2,51 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A modern gym interior with various equipment.",
+      "description": "A trainer explaining a workout to a client in a bright, modern gym.",
       "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
-      "imageHint": "gym interior"
+      "imageHint": "trainer client"
     },
     {
       "id": "about-1",
-      "description": "A group of people in a high-intensity interval training class.",
+      "description": "A senior citizen smiling while lifting a small dumbbell.",
       "imageUrl": "https://picsum.photos/seed/about1/600/400",
-      "imageHint": "fitness class"
+      "imageHint": "senior workout"
     },
     {
       "id": "about-2",
-      "description": "Rows of treadmills and elliptical machines in a gym.",
+      "description": "A woman in athletic wear doing a bicep curl with a dumbbell.",
       "imageUrl": "https://picsum.photos/seed/about2/600/400",
-      "imageHint": "gym equipment"
+      "imageHint": "woman dumbbell"
     },
     {
       "id": "about-3",
-      "description": "A person lifting weights with a spotter.",
+      "description": "A fitness trainer guiding a client on a weight machine.",
       "imageUrl": "https://picsum.photos/seed/about3/600/400",
-      "imageHint": "weight lifting"
+      "imageHint": "trainer client"
     },
     {
       "id": "trainer-1",
-      "description": "Portrait of a smiling male fitness trainer.",
+      "description": "A senior man on a treadmill listening to a trainer.",
       "imageUrl": "https://picsum.photos/seed/trainer1/400/400",
-      "imageHint": "fitness trainer"
+      "imageHint": "senior fitness"
     },
     {
       "id": "trainer-2",
-      "description": "Portrait of a female yoga instructor in a yoga pose.",
+      "description": "A girl concentrating while lifting a dumbbell.",
       "imageUrl": "https://picsum.photos/seed/trainer2/400/400",
-      "imageHint": "yoga instructor"
+      "imageHint": "girl dumbbell"
     },
     {
       "id": "trainer-3",
-      "description": "Portrait of a male boxing coach with gloves.",
+      "description": "A trainer demonstrating an exercise to a small group.",
       "imageUrl": "https://picsum.photos/seed/trainer3/400/400",
-      "imageHint": "boxing coach"
+      "imageHint": "trainer explaining"
     },
     {
       "id": "trainer-4",
-      "description": "Portrait of a female nutritionist with fresh vegetables.",
+      "description": "A senior woman doing a seated row exercise.",
       "imageUrl": "https://picsum.photos/seed/trainer4/400/400",
-      "imageHint": "nutritionist"
+      "imageHint": "senior workout"
     }
   ]
 }
