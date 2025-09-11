@@ -2,15 +2,15 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A trainer explaining a workout to a client in a bright, modern gym.",
+      "description": "A motivated person celebrating a fitness achievement in a gym.",
       "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
-      "imageHint": "trainer client"
+      "imageHint": "fitness achievement"
     },
     {
       "id": "about-1",
-      "description": "A senior citizen smiling while lifting a small dumbbell.",
+      "description": "A woman in a yoga pose, looking serene and focused.",
       "imageUrl": "https://picsum.photos/seed/about1/600/400",
-      "imageHint": "senior workout"
+      "imageHint": "woman yoga"
     },
     {
       "id": "about-2",
@@ -20,9 +20,9 @@
     },
     {
       "id": "about-3",
-      "description": "A fitness trainer guiding a client on a weight machine.",
+      "description": "A man lifting a heavy barbell, showing strength and determination.",
       "imageUrl": "https://picsum.photos/seed/about3/600/400",
-      "imageHint": "trainer client"
+      "imageHint": "man lifting"
     },
     {
       "id": "trainer-1",
