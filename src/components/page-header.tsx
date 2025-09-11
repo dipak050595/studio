@@ -1,12 +1,13 @@
 'use client';
 
-import { Dumbbell, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+import { FitnmoveLogo } from './icons/fitnmove-logo';
 
 const navLinks = [
   { href: '#about', label: 'About' },
@@ -38,7 +39,7 @@ export default function PageHeader() {
     >
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Dumbbell className="h-6 w-6 text-primary" />
+          <FitnmoveLogo className="h-8 w-8" />
           <span className="text-xl font-bold">FITNMOVE Fitness</span>
         </Link>
 
@@ -72,7 +73,7 @@ export default function PageHeader() {
             <SheetContent side="left">
               <div className="flex flex-col gap-6 pt-8">
                 <Link href="/" className="mb-4 flex items-center gap-2">
-                  <Dumbbell className="h-6 w-6 text-primary" />
+                  <FitnmoveLogo className="h-8 w-8" />
                   <span className="text-xl font-bold">FITNMOVE Fitness</span>
                 </Link>
                 {navLinks.map((link) => (
