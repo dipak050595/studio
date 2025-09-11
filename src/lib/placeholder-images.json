@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A motivated person celebrating a fitness achievement in a gym.",
+      "description": "A sprawling, well-equipped gym area ready for a workout.",
       "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
-      "imageHint": "fitness achievement"
+      "imageHint": "gym area"
     },
     {
       "id": "about-1",
