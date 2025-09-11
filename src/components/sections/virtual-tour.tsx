@@ -8,7 +8,7 @@ export default function VirtualTourSection() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">
             Explore our state-of-the-art facilities from the comfort of your
-            home. See for yourself why Triumph Fitness is the right choice for
+            home. See for yourself why FITNMOVE Fitness is the right choice for
             you.
           </p>
         </div>
@@ -21,7 +21,7 @@ export default function VirtualTourSection() {
             allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Triumph Fitness Virtual Tour"
+            title="FITNMOVE Fitness Virtual Tour"
           ></iframe>
         </div>
       </div>

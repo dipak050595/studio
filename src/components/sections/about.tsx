@@ -18,7 +18,7 @@ export default function AboutSection() {
                 More Than Just a Gym
               </h2>
               <p className="max-w-xl text-muted-foreground md:text-lg">
-                At Triumph Fitness, we believe that a gym is more than just a
+                At FITNMOVE Fitness, we believe that a gym is more than just a
                 place to work out. It's a community, a source of motivation, and
                 a catalyst for transformation. Our mission is to provide a
                 welcoming, state-of-the-art environment where you can challenge

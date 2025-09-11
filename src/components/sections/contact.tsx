@@ -36,7 +36,7 @@ export default function ContactSection() {
                   <div className="flex items-start gap-3">
                     <MapPinIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                     <p className="text-muted-foreground">
-                      123 Fitness Ave, Triumph City, 10001
+                      123 Fitness Ave, FITNMOVE City, 10001
                     </p>
                   </div>
                   <div className="flex items-center gap-3">
@@ -46,7 +46,7 @@ export default function ContactSection() {
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 flex-shrink-0 text-primary" />
                     <p className="text-muted-foreground">
-                      hello@triumph.fitness
+                      hello@fitnmove.fitness
                     </p>
                   </div>
                    <div className="flex items-center gap-3">

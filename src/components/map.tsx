@@ -31,7 +31,7 @@ export function Map() {
         <GoogleMap
           defaultCenter={position}
           defaultZoom={14}
-          mapId="triumph-fitness-map"
+          mapId="fitnmove-fitness-map"
           gestureHandling={'greedy'}
           disableDefaultUI={true}
         >

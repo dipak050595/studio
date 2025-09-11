@@ -7,7 +7,7 @@ export default function PageFooter() {
       <div className="container py-8">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Triumph Fitness. All rights
+            &copy; {new Date().getFullYear()} FITNMOVE Fitness. All rights
             reserved.
           </p>
           <div className="flex items-center gap-4">
