@@ -40,7 +40,9 @@ export default function PageHeader() {
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <FitnmoveLogo className="h-14 w-14" />
-          <span className="text-xl font-bold">FITNMOVE Fitness</span>
+          <span className="text-xl font-bold bg-gradient-to-r from-[#8A2BE2] via-[#FF69B4] to-[#FFA500] text-transparent bg-clip-text">
+            FITNMOVE Fitness
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -74,7 +76,9 @@ export default function PageHeader() {
               <div className="flex flex-col gap-6 pt-8">
                 <Link href="/" className="mb-4 flex items-center gap-2">
                   <FitnmoveLogo className="h-14 w-14" />
-                  <span className="text-xl font-bold">FITNMOVE Fitness</span>
+                  <span className="text-xl font-bold bg-gradient-to-r from-[#8A2BE2] via-[#FF69B4] to-[#FFA500] text-transparent bg-clip-text">
+                    FITNMOVE Fitness
+                  </span>
                 </Link>
                 {navLinks.map((link) => (
                   <Link
