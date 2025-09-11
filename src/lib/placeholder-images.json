@@ -3,13 +3,13 @@
     {
       "id": "hero-background",
       "description": "A sprawling, well-equipped gym area ready for a workout.",
-      "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
+      "imageUrl": "https://www.thebasementbuilders.ca/media/images/6_copy_pbhpPbb.2e16d0ba.fill-1600x800.jpg",
       "imageHint": "gym area"
     },
     {
       "id": "about-1",
       "description": "A woman in a yoga pose, looking serene and focused.",
-      "imageUrl": "https://picsum.photos/seed/about1/600/400",
+      "imageUrl": "https://picsum.photos/seed/hero2/600/400",
       "imageHint": "woman yoga"
     },
     {
