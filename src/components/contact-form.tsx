@@ -128,7 +128,7 @@ export function ContactForm() {
         />
         <Button
           type="submit"
-          className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+          className="w-full bg-red-500 text-white hover:bg-green-500"
           size="lg"
           disabled={form.formState.isSubmitting}
         >
