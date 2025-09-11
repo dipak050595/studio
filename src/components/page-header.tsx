@@ -39,7 +39,7 @@ export default function PageHeader() {
     >
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <FitnmoveLogo className="h-8 w-8" />
+          <FitnmoveLogo className="h-10 w-10" />
           <span className="text-xl font-bold">FITNMOVE Fitness</span>
         </Link>
 
@@ -73,7 +73,7 @@ export default function PageHeader() {
             <SheetContent side="left">
               <div className="flex flex-col gap-6 pt-8">
                 <Link href="/" className="mb-4 flex items-center gap-2">
-                  <FitnmoveLogo className="h-8 w-8" />
+                  <FitnmoveLogo className="h-10 w-10" />
                   <span className="text-xl font-bold">FITNMOVE Fitness</span>
                 </Link>
                 {navLinks.map((link) => (
