@@ -6,10 +6,16 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 type HeroSectionProps = {
   headline: string;
+  subHeadline: string;
 };
 
-export default function HeroSection({ headline }: HeroSectionProps) {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
+export default function HeroSection({
+  headline,
+  subHeadline,
+}: HeroSectionProps) {
+  const heroImage = PlaceHolderImages.find(
+    (img) => img.id === 'hero-background'
+  );
 
   return (
     <section className="relative h-[80vh] min-h-[600px] w-full">
@@ -30,8 +36,7 @@ export default function HeroSection({ headline }: HeroSectionProps) {
             {headline}
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-gray-200 md:text-xl">
-            State-of-the-art facilities, expert trainers, and a supportive
-            community to help you triumph.
+            {subHeadline}
           </p>
           <div className="flex justify-center">
             <Button
