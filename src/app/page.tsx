@@ -4,7 +4,6 @@ import ClassesSection from '@/components/sections/classes';
 import ContactSection from '@/components/sections/contact';
 import HeroSection from '@/components/sections/hero';
 import TrainersSection from '@/components/sections/trainers';
-import VirtualTourSection from '@/components/sections/virtual-tour';
 
 export default async function Home() {
   const { headline } = await getDynamicIncentiveHeadline();
@@ -15,7 +14,6 @@ export default async function Home() {
       <AboutSection />
       <ClassesSection />
       <TrainersSection />
-      <VirtualTourSection />
       <ContactSection />
     </>
   );
