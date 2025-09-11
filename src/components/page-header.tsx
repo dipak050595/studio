@@ -50,7 +50,7 @@ export default function PageHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="text-sm font-medium text-destructive transition-colors hover:text-destructive/80"
             >
               {link.label}
             </Link>
@@ -84,7 +84,7 @@ export default function PageHeader() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-lg font-medium text-muted-foreground transition-colors hover:text-primary"
+                    className="text-lg font-medium text-destructive transition-colors hover:text-destructive/80"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
