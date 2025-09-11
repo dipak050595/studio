@@ -39,7 +39,7 @@ export default function PageHeader() {
     >
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <FitnmoveLogo className="h-14 w-14" />
+          <FitnmoveLogo className="h-20 w-20" />
           <span className="text-xl font-bold bg-gradient-to-r from-[#8A2BE2] via-[#FF69B4] to-[#FFA500] text-transparent bg-clip-text">
             FITNMOVE Fitness
           </span>
@@ -50,7 +50,7 @@ export default function PageHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-destructive transition-colors hover:text-destructive/80"
+              className="text-sm font-medium text-red-500 transition-colors hover:text-blue-500"
             >
               {link.label}
             </Link>
@@ -84,7 +84,7 @@ export default function PageHeader() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-lg font-medium text-destructive transition-colors hover:text-destructive/80"
+                    className="text-lg font-medium text-red-500 transition-colors hover:text-blue-500"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
