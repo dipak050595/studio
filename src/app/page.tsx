@@ -4,16 +4,32 @@ import AboutSection from '@/components/sections/about';
 import ContactSection from '@/components/sections/contact';
 import HeroSection from '@/components/sections/hero';
 import TrainersSection from '@/components/sections/trainers';
+import { Suspense } from 'react';
 
-export default async function Home() {
+async function Headlines() {
   const [{ headline }, { subHeadline }] = await Promise.all([
     getDynamicIncentiveHeadline(),
     getHeroSubHeadline(),
   ]);
 
+  return <HeroSection headline={headline} subHeadline={subHeadline} />;
+}
+
+function HeadlineSkeleton() {
+  return (
+    <HeroSection
+      headline="Unlock Your Potential"
+      subHeadline="State-of-the-art facilities, expert trainers, and a supportive community to help you triumph."
+    />
+  );
+}
+
+export default function Home() {
   return (
     <>
-      <HeroSection headline={headline} subHeadline={subHeadline} />
+      <Suspense fallback={<HeadlineSkeleton />}>
+        <Headlines />
+      </Suspense>
       <AboutSection />
       <TrainersSection />
       <ContactSection />
