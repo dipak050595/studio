@@ -18,6 +18,7 @@ import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { bookFreeTrialAction } from '@/app/actions';
 import { Loader2 } from 'lucide-react';
+import { Textarea } from './ui/textarea';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -27,6 +28,7 @@ const formSchema = z.object({
     message: 'Please enter a valid email address.',
   }),
   phone: z.string().optional(),
+  medicalHistory: z.string().optional(),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -47,6 +49,7 @@ export function ContactForm() {
       name: '',
       email: '',
       phone: '',
+      medicalHistory: '',
     },
     // Set server errors on the form
     errors: state?.errors
@@ -120,6 +123,22 @@ export function ContactForm() {
               <FormLabel>Phone Number (Optional)</FormLabel>
               <FormControl>
                 <Input placeholder="(123) 456-7890" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="medicalHistory"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Medical History (Optional)</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Please share any relevant medical history..."
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
