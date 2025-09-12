@@ -52,17 +52,6 @@ export function ContactForm() {
       phone: '',
       medicalHistory: '',
     },
-    // Set server errors on the form
-    errors: state?.errors
-      ? Object.keys(state.errors).reduce((acc, key) => {
-          const field = key as keyof FormValues;
-          acc[field] = {
-            type: 'manual',
-            message: state.errors[field]?.[0],
-          };
-          return acc;
-        }, {} as Record<keyof FormValues, any>)
-      : {},
   });
 
   useEffect(() => {
@@ -81,13 +70,18 @@ export function ContactForm() {
     }
   }, [state, toast, form]);
 
+  const onSubmit = (data: FormValues) => {
+    const formData = new FormData();
+    Object.keys(data).forEach(key => {
+        formData.append(key, data[key as keyof FormValues]);
+    });
+    formAction(formData);
+  };
+
   return (
     <Form {...form}>
       <form
-        action={formAction}
-        onSubmit={form.handleSubmit(() =>
-          formAction(new FormData(form.control._formValues))
-        )}
+        onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-6"
       >
         <FormField
