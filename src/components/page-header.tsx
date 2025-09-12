@@ -10,8 +10,8 @@ import { cn } from '@/lib/utils';
 import { FitnmoveLogo } from './icons/fitnmove-logo';
 
 const navLinks = [
-  { href: '#services', label: 'Services' },
   { href: '#about', label: 'About' },
+  { href: '#services', label: 'Services' },
   { href: '#trainers', label: 'Trainers' },
   { href: '#contact-details', label: 'Contact' },
 ];

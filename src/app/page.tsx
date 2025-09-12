@@ -31,8 +31,8 @@ export default function Home() {
       <Suspense fallback={<HeadlineSkeleton />}>
         <Headlines />
       </Suspense>
-      <ServicesSection />
       <AboutSection />
+      <ServicesSection />
       <TrainersSection />
       <ContactSection />
     </>
