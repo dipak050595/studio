@@ -9,7 +9,7 @@ const bookFreeTrialSchema = z.object({
   gender: z.string().min(1, { message: 'Please select your gender.' }),
   email: z.string().email({ message: 'Please enter a valid email address.' }),
   phone: z.string().regex(/^\d{10}$/, { message: 'Phone number must be exactly 10 digits.' }),
-  medicalCondition: z.string().min(1, { message: 'Please select a medical condition.' }),
+  medicalHistory: z.string().min(1, { message: 'Please enter your medical history.' }),
 });
 
 export async function bookFreeTrialAction(
@@ -22,7 +22,7 @@ export async function bookFreeTrialAction(
     gender: formData.get('gender'),
     email: formData.get('email'),
     phone: formData.get('phone'),
-    medicalCondition: formData.get('medicalCondition'),
+    medicalHistory: formData.get('medicalHistory'),
   });
 
   // If form validation fails, return errors
