@@ -27,8 +27,8 @@ const formSchema = z.object({
   email: z.string().email({
     message: 'Please enter a valid email address.',
   }),
-  phone: z.string().optional(),
-  medicalHistory: z.string().optional(),
+  phone: z.string().min(1, { message: 'Phone number is required.' }),
+  medicalHistory: z.string().min(1, { message: 'Please provide your medical history.' }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -120,7 +120,7 @@ export function ContactForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Phone Number (Optional)</FormLabel>
+              <FormLabel>Phone Number</FormLabel>
               <FormControl>
                 <Input placeholder="(123) 456-7890" {...field} />
               </FormControl>
@@ -133,7 +133,7 @@ export function ContactForm() {
           name="medicalHistory"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Medical History (Optional)</FormLabel>
+              <FormLabel>Medical History</FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="Please share any relevant medical history..."

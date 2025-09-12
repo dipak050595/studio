@@ -6,8 +6,8 @@ import { z } from 'zod';
 const bookFreeTrialSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email address.' }),
-  phone: z.string().optional(),
-  medicalHistory: z.string().optional(),
+  phone: z.string().min(1, { message: 'Phone number is required.' }),
+  medicalHistory: z.string().min(1, { message: 'Please provide your medical history.' }),
 });
 
 export async function bookFreeTrialAction(
