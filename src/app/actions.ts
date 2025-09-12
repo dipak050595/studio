@@ -6,7 +6,7 @@ import { z } from 'zod';
 const bookFreeTrialSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email address.' }),
-  phone: z.string().min(1, { message: 'Phone number is required.' }),
+  phone: z.string().regex(/^\d{10}$/, { message: 'Phone number must be exactly 10 digits.' }),
   medicalHistory: z.string().min(1, { message: 'Please provide your medical history.' }),
 });
 

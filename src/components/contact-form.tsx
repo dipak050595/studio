@@ -27,7 +27,9 @@ const formSchema = z.object({
   email: z.string().email({
     message: 'Please enter a valid email address.',
   }),
-  phone: z.string().min(1, { message: 'Phone number is required.' }),
+  phone: z.string().regex(/^\d{10}$/, {
+    message: 'Phone number must be 10 digits.',
+  }),
   medicalHistory: z.string().min(1, { message: 'Please provide your medical history.' }),
 });
 
@@ -117,7 +119,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Phone Number</FormLabel>
               <FormControl>
-                <Input placeholder="(123) 456-7890" {...field} />
+                <Input placeholder="1234567890" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
