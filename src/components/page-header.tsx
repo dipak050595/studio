@@ -12,7 +12,7 @@ import { FitnmoveLogo } from './icons/fitnmove-logo';
 const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#trainers', label: 'Trainers' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#contact-details', label: 'Contact' },
 ];
 
 export default function PageHeader() {
@@ -61,7 +61,7 @@ export default function PageHeader() {
             asChild
             className="hidden bg-red-500 text-white hover:bg-green-500 md:inline-flex"
           >
-            <Link href="#contact">Book Free Trial</Link>
+            <Link href="#contact-form">Book Free Trial</Link>
           </Button>
 
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -95,7 +95,7 @@ export default function PageHeader() {
                   size="lg"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <Link href="#contact">Book Free Trial</Link>
+                  <Link href="#contact-form">Book Free Trial</Link>
                 </Button>
               </div>
             </SheetContent>

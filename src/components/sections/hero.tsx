@@ -44,7 +44,7 @@ export default function HeroSection({
               size="lg"
               className="bg-red-500 text-white hover:bg-green-500"
             >
-              <Link href="#contact">Book a Free Trial</Link>
+              <Link href="#contact-form">Book a Free Trial</Link>
             </Button>
           </div>
         </div>
