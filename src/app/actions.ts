@@ -5,6 +5,8 @@ import { z } from 'zod';
 // Define the schema for the form data
 const bookFreeTrialSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
+  age: z.string().min(1, { message: 'Please enter a valid age.' }),
+  gender: z.string().min(1, { message: 'Please select your gender.' }),
   email: z.string().email({ message: 'Please enter a valid email address.' }),
   phone: z.string().regex(/^\d{10}$/, { message: 'Phone number must be exactly 10 digits.' }),
   medicalHistory: z.string().min(1, { message: 'Please provide your medical history.' }),
@@ -16,6 +18,8 @@ export async function bookFreeTrialAction(
 ) {
   const validatedFields = bookFreeTrialSchema.safeParse({
     name: formData.get('name'),
+    age: formData.get('age'),
+    gender: formData.get('gender'),
     email: formData.get('email'),
     phone: formData.get('phone'),
     medicalHistory: formData.get('medicalHistory'),

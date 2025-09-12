@@ -19,10 +19,23 @@ import { useToast } from '@/hooks/use-toast';
 import { bookFreeTrialAction } from '@/app/actions';
 import { Loader2 } from 'lucide-react';
 import { Textarea } from './ui/textarea';
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from '@/components/ui/radio-group';
 
 const formSchema = z.object({
   name: z.string().min(2, {
     message: 'Name must be at least 2 characters.',
+  }),
+  age: z
+    .string()
+    .min(1, { message: 'Please enter your age.' })
+    .refine((val) => !isNaN(Number(val)) && Number(val) > 0, {
+      message: 'Please enter a valid age.',
+    }),
+  gender: z.string({
+    required_error: 'Please select your gender.',
   }),
   email: z.string().email({
     message: 'Please enter a valid email address.',
@@ -30,7 +43,9 @@ const formSchema = z.object({
   phone: z.string().regex(/^\d{10}$/, {
     message: 'Phone number must be 10 digits.',
   }),
-  medicalHistory: z.string().min(1, { message: 'Please provide your medical history.' }),
+  medicalHistory: z
+    .string()
+    .min(1, { message: 'Please provide your medical history.' }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -50,6 +65,8 @@ export function ContactForm() {
     mode: 'onChange',
     defaultValues: {
       name: '',
+      age: '',
+      gender: '',
       email: '',
       phone: '',
       medicalHistory: '',
@@ -74,18 +91,15 @@ export function ContactForm() {
 
   const onSubmit = (data: FormValues) => {
     const formData = new FormData();
-    Object.keys(data).forEach(key => {
-        formData.append(key, data[key as keyof FormValues]);
+    Object.keys(data).forEach((key) => {
+      formData.append(key, data[key as keyof FormValues]);
     });
     formAction(formData);
   };
 
   return (
     <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6"
-      >
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <FormField
           control={form.control}
           name="name"
@@ -94,6 +108,57 @@ export function ContactForm() {
               <FormLabel>Full Name</FormLabel>
               <FormControl>
                 <Input placeholder="John Doe" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="age"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Age</FormLabel>
+              <FormControl>
+                <Input type="number" placeholder="25" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="gender"
+          render={({ field }) => (
+            <FormItem className="space-y-3">
+              <FormLabel>Gender</FormLabel>
+              <FormControl>
+                <RadioGroup
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                  className="flex flex-col space-y-1"
+                >
+                  <FormItem className="flex items-center space-x-3 space-y-0">
+                    <FormControl>
+                      <RadioGroupItem value="male" />
+                    </FormControl>
+                    <FormLabel className="font-normal">Male</FormLabel>
+                  </FormItem>
+                  <FormItem className="flex items-center space-x-3 space-y-0">
+                    <FormControl>
+                      <RadioGroupItem value="female" />
+                    </FormControl>
+                    <FormLabel className="font-normal">Female</FormLabel>
+                  </FormItem>
+                  <FormItem className="flex items-center space-x-3 space-y-0">
+                    <FormControl>
+                      <RadioGroupItem value="other" />
+                    </FormControl>
+                    <FormLabel className="font-normal">
+                      Other / Prefer not to say
+                    </FormLabel>
+                  </FormItem>
+                </RadioGroup>
               </FormControl>
               <FormMessage />
             </FormItem>
