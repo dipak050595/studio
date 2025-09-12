@@ -11,7 +11,6 @@ import { FitnmoveLogo } from './icons/fitnmove-logo';
 
 const navLinks = [
   { href: '#about', label: 'About' },
-  { href: '#classes', label: 'Classes' },
   { href: '#trainers', label: 'Trainers' },
   { href: '#contact', label: 'Contact' },
 ];
