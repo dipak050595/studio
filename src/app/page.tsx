@@ -3,6 +3,7 @@ import { getHeroSubHeadline } from '@/ai/flows/hero-sub-headline';
 import AboutSection from '@/components/sections/about';
 import ContactSection from '@/components/sections/contact';
 import HeroSection from '@/components/sections/hero';
+import ServicesSection from '@/components/sections/services';
 import TrainersSection from '@/components/sections/trainers';
 import { Suspense } from 'react';
 
@@ -30,6 +31,7 @@ export default function Home() {
       <Suspense fallback={<HeadlineSkeleton />}>
         <Headlines />
       </Suspense>
+      <ServicesSection />
       <AboutSection />
       <TrainersSection />
       <ContactSection />

@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 import { FitnmoveLogo } from './icons/fitnmove-logo';
 
 const navLinks = [
+  { href: '#services', label: 'Services' },
   { href: '#about', label: 'About' },
   { href: '#trainers', label: 'Trainers' },
   { href: '#contact-details', label: 'Contact' },
@@ -49,7 +50,7 @@ export default function PageHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-red-500 transition-colors hover:text-blue-500"
+              className="text-sm font-medium text-foreground transition-colors hover:text-primary"
             >
               {link.label}
             </Link>
@@ -59,7 +60,7 @@ export default function PageHeader() {
         <div className="flex items-center gap-2">
           <Button
             asChild
-            className="hidden bg-red-500 text-white hover:bg-green-500 md:inline-flex"
+            className="hidden bg-primary text-primary-foreground hover:bg-primary/90 md:inline-flex"
           >
             <Link href="#contact-form">Book Free Trial</Link>
           </Button>
@@ -83,7 +84,7 @@ export default function PageHeader() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-lg font-medium text-red-500 transition-colors hover:text-blue-500"
+                    className="text-lg font-medium text-foreground transition-colors hover:text-primary"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
@@ -91,7 +92,7 @@ export default function PageHeader() {
                 ))}
                 <Button
                   asChild
-                  className="mt-4 bg-red-500 text-white hover:bg-green-500"
+                  className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90"
                   size="lg"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
