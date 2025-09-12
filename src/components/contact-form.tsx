@@ -45,6 +45,7 @@ export function ContactForm() {
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
+    mode: 'onChange',
     defaultValues: {
       name: '',
       email: '',
@@ -148,7 +149,7 @@ export function ContactForm() {
           type="submit"
           className="w-full bg-red-500 text-white hover:bg-green-500"
           size="lg"
-          disabled={form.formState.isSubmitting}
+          disabled={!form.formState.isValid || form.formState.isSubmitting}
         >
           {form.formState.isSubmitting && (
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
