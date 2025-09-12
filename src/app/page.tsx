@@ -2,6 +2,7 @@ import { getDynamicIncentiveHeadline } from '@/ai/flows/dynamic-incentive-headli
 import { getHeroSubHeadline } from '@/ai/flows/hero-sub-headline';
 import AboutSection from '@/components/sections/about';
 import ContactSection from '@/components/sections/contact';
+import FeedbackSection from '@/components/sections/feedback';
 import HeroSection from '@/components/sections/hero';
 import ServicesSection from '@/components/sections/services';
 import TrainersSection from '@/components/sections/trainers';
@@ -34,6 +35,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <TrainersSection />
+      <FeedbackSection />
       <ContactSection />
     </>
   );
