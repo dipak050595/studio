@@ -18,11 +18,14 @@ import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { bookFreeTrialAction } from '@/app/actions';
 import { Loader2 } from 'lucide-react';
-import { Textarea } from './ui/textarea';
 import {
-  RadioGroup,
-  RadioGroupItem,
-} from '@/components/ui/radio-group';
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -43,9 +46,7 @@ const formSchema = z.object({
   phone: z.string().regex(/^\d{10}$/, {
     message: 'Phone number must be 10 digits.',
   }),
-  medicalHistory: z
-    .string()
-    .min(1, { message: 'Please provide your medical history.' }),
+  medicalCondition: z.string().min(1, { message: 'Please select a medical condition.' }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -69,7 +70,7 @@ export function ContactForm() {
       gender: '',
       email: '',
       phone: '',
-      medicalHistory: '',
+      medicalCondition: '',
     },
   });
 
@@ -192,16 +193,24 @@ export function ContactForm() {
         />
         <FormField
           control={form.control}
-          name="medicalHistory"
+          name="medicalCondition"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Medical History</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Please share any relevant medical history..."
-                  {...field}
-                />
-              </FormControl>
+              <FormLabel>Medical Condition</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a condition" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="sugar">Sugar</SelectItem>
+                  <SelectItem value="pcod">PCOD</SelectItem>
+                  <SelectItem value="pcos">PCOS</SelectItem>
+                  <SelectItem value="none">None</SelectItem>
+                  <SelectItem value="other">Other</SelectItem>
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}
