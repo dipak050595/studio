@@ -1,33 +1,33 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 type HeroSectionProps = {
   headline: string;
   subHeadline: string;
+  videoUrl?: string;
 };
 
 export default function HeroSection({
   headline,
   subHeadline,
+  videoUrl,
 }: HeroSectionProps) {
-  const heroImage = PlaceHolderImages.find(
-    (img) => img.id === 'hero-background'
-  );
-
   return (
-    <section className="relative h-[80vh] min-h-[600px] w-full">
-      {heroImage && (
-        <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          data-ai-hint={heroImage.imageHint}
-          fill
-          className="object-cover"
-          priority
+    <section className="relative h-[80vh] min-h-[600px] w-full overflow-hidden">
+      {videoUrl ? (
+        <video
+          src={videoUrl}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
         />
+      ) : (
+        <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
+          <p className="text-white">Loading video...</p>
+        </div>
       )}
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex h-full items-center justify-center text-center">
@@ -42,7 +42,7 @@ export default function HeroSection({
             <Button
               asChild
               size="lg"
-              className="bg-red-500 text-white hover:bg-green-500"
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
             >
               <Link href="#contact-form">Book a Free Trial</Link>
             </Button>
