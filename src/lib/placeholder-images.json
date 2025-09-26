@@ -2,45 +2,45 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A sprawling, well-equipped gym area ready for a workout.",
-      "imageUrl": "https://www.thebasementbuilders.ca/media/images/6_copy_pbhpPbb.2e16d0ba.fill-1600x800.jpg",
-      "imageHint": "gym area"
+      "description": "A senior man doing yoga outdoors.",
+      "imageUrl": "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzZW5pb3IlMjBtYW4lMjB5b2dhfGVufDB8fHx8MTc1ODk0MjA2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "senior yoga"
     },
     {
       "id": "about-1",
-      "description": "A senior Indian man lifting a dumbbell at home with a trainer's guidance.",
-      "imageUrl": "https://images.unsplash.com/photo-1641973553115-15a11635ea11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxpbmRpYW4lMjBtYW4lMjB3b3Jrb3V0fGVufDB8fHx8MTc1ODg4NTMxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "indian man fitness"
+      "description": "A senior man in a yoga pose.",
+      "imageUrl": "https://images.unsplash.com/photo-1620197941097-b0163a8549e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzZW5pb3IlMjBtYW4lMjB5b2dhfGVufDB8fHx8MTc1ODk0MjA2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "senior yoga"
     },
     {
       "id": "about-2",
-      "description": "A senior Indian woman doing a seated row exercise with a trainer at home.",
-      "imageUrl": "https://images.unsplash.com/photo-1716367840407-f9414a84b325?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzZW5pb3IlMjB3b3Jrb3V0fGVufDB8fHx8MTc1ODg4NDg4NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "indian woman training"
+      "description": "A fit senior man meditating outdoors.",
+      "imageUrl": "https://images.unsplash.com/photo-1603178455939-95a9a15a77a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2VuaW9yJTIwbWFuJTIweW9nYXxlbnwwfHx8fDE3NTg5NDIwNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "senior meditation"
     },
     {
       "id": "trainer-1",
-      "description": "A senior man on a treadmill listening to a trainer.",
-      "imageUrl": "https://images.unsplash.com/photo-1742316027363-9b3d6501715d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2VuaW9yJTIwZml0bmVzc3xlbnwwfHx8fDE3NTg4ODQ4ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "senior fitness"
+      "description": "A senior man practicing yoga on a mat.",
+      "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx5b2dhfGVufDB8fHx8MTc1ODk0MjA2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yoga pose"
     },
     {
       "id": "trainer-2",
-      "description": "A girl concentrating while lifting a dumbbell.",
-      "imageUrl": "https://images.unsplash.com/photo-1718633587101-77b9e0634be1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnaXJsJTIwZHVtYmJlbGx8ZW58MHx8fHwxNzU4ODg0ODg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "girl dumbbell"
+      "description": "Close up of a senior man in a yoga pose.",
+      "imageUrl": "https://images.unsplash.com/photo-1597282366897-1a99b24b2c45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzZW5pb3IlMjBtYW4lMjB5b2dhfGVufDB8fHx8MTc1ODk0MjA2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man yoga"
     },
     {
       "id": "trainer-3",
-      "description": "A trainer demonstrating an exercise to a small group.",
-      "imageUrl": "https://images.unsplash.com/photo-1594750170036-022d6e8b1822?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cmFpbmVyJTIwZXhwbGFpbmluZ3xlbnwwfHx8fDE3NTg4ODQ4ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "trainer explaining"
+      "description": "A senior man doing a yoga stretch in a park.",
+      "imageUrl": "https://images.unsplash.com/photo-1591291621213-3914a5249c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzZW5pb3IlMjBtYW4lMjB5b2dhfGVufDB8fHx8MTc1ODk0MjA2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man stretching"
     },
     {
       "id": "trainer-4",
-      "description": "A senior woman doing a seated row exercise.",
-      "imageUrl": "https://images.unsplash.com/photo-1716367840407-f9414a84b325?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzZW5pb3IlMjB3b3Jrb3V0fGVufDB8fHx8MTc1ODg4NDg4NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "senior workout"
+      "description": "A senior man meditating on a rock by the sea.",
+      "imageUrl": "https://images.unsplash.com/photo-1596724335472-23b09075a78c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzZW5pb3IlMjBtYW4lMjB5b2dhfGVufDB8fHx8MTc1ODk0MjA2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man meditating"
     }
   ]
 }
