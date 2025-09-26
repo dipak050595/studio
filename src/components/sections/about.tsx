@@ -1,10 +1,8 @@
-import Image from 'next/image';
-
 export default function AboutSection() {
   return (
     <section id="about" className="section-padding bg-card">
       <div className="container">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-1 lg:gap-16">
           <div className="flex flex-col justify-center space-y-6 fade-in-up">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -34,24 +32,6 @@ export default function AboutSection() {
                 Let’s move towards a healthier tomorrow, together!
               </p>
             </div>
-          </div>
-          <div className="fade-in-up flex flex-col gap-4">
-            <Image
-              src="/image-3.jpeg"
-              alt="A trainer assisting a woman with her workout."
-              width={600}
-              height={600}
-              className="w-full h-auto object-cover rounded-lg"
-              data-ai-hint="personal training"
-            />
-            <Image
-              src="/image-1.png"
-              alt="Additional image for the about section"
-              width={600}
-              height={600}
-              className="w-full h-auto object-cover rounded-lg"
-              data-ai-hint="fitness workout"
-            />
           </div>
         </div>
       </div>
