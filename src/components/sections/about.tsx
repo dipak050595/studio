@@ -1,8 +1,24 @@
 'use client';
 
+import { useState } from 'react';
 import ImageUploader from '../image-uploader';
+import { Button } from '../ui/button';
+import { Trash2 } from 'lucide-react';
+import Image from 'next/image';
 
 export default function AboutSection() {
+  const [images, setImages] = useState<string[]>([]);
+
+  const handleImageUpload = (dataUrl: string | null) => {
+    if (dataUrl) {
+      setImages((prevImages) => [...prevImages, dataUrl]);
+    }
+  };
+
+  const handleRemoveImage = (index: number) => {
+    setImages((prevImages) => prevImages.filter((_, i) => i !== index));
+  };
+
   return (
     <section id="about" className="section-padding bg-card">
       <div className="container">
@@ -39,10 +55,36 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          <div className="fade-in-up grid grid-cols-1 md:grid-cols-3 gap-4">
-            <ImageUploader onImageUpload={() => {}} />
-            <ImageUploader onImageUpload={() => {}} />
-            <ImageUploader onImageUpload={() => {}} />
+          <div className="fade-in-up space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {images.map((src, index) => (
+                <div key={index} className="relative group">
+                  <Image
+                    src={src}
+                    alt={`Uploaded image ${index + 1}`}
+                    width={600}
+                    height={400}
+                    className="object-cover rounded-lg w-full aspect-[3/2]"
+                  />
+                  <Button
+                    variant="destructive"
+                    size="icon"
+                    className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                    onClick={() => handleRemoveImage(index)}
+                  >
+                    <Trash2 />
+                    <span className="sr-only">Remove image</span>
+                  </Button>
+                </div>
+              ))}
+            </div>
+            {images.length < 3 && (
+                <ImageUploader
+                    onImageUpload={handleImageUpload}
+                    cardTitle="Upload an image"
+                    showPreview={false}
+                />
+            )}
           </div>
         </div>
       </div>

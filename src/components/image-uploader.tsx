@@ -15,6 +15,7 @@ type ImageUploaderProps = {
   width?: number;
   height?: number;
   initialPreview?: string | null;
+  showPreview?: boolean;
 };
 
 export default function ImageUploader({
@@ -24,6 +25,7 @@ export default function ImageUploader({
   width,
   height,
   initialPreview,
+  showPreview = true,
 }: ImageUploaderProps) {
   const [preview, setPreview] = useState<string | null>(initialPreview || null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -43,8 +45,14 @@ export default function ImageUploader({
       const reader = new FileReader();
       reader.onloadend = () => {
         const result = reader.result as string;
-        setPreview(result);
+        if (showPreview) {
+            setPreview(result);
+        }
         onImageUpload(result);
+        // Reset file input to allow uploading the same file again
+        if (fileInputRef.current) {
+            fileInputRef.current.value = '';
+        }
       };
       reader.readAsDataURL(selectedFile);
     }
@@ -62,7 +70,7 @@ export default function ImageUploader({
     }
   }, [onImageUpload]);
 
-  if (preview) {
+  if (preview && showPreview) {
     return (
         <div className={`relative w-full mx-auto group ${className}`}>
             <Image
