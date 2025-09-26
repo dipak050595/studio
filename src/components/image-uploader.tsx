@@ -29,27 +29,6 @@ export default function ImageUploader({ onImageUpload }: ImageUploaderProps) {
     onImageUpload('imageUrl', '');
   };
 
-  if (preview) {
-    return (
-      <div className="relative group aspect-[3/2] w-full">
-        <Image
-          src={preview}
-          alt="Image preview"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg"
-        />
-        <button
-          onClick={handleRemoveImage}
-          className="absolute top-2 right-2 z-10 p-1.5 bg-background/60 text-foreground rounded-full hover:bg-background/80 transition-colors"
-          aria-label="Remove image"
-        >
-          <X className="h-4 w-4" />
-        </button>
-      </div>
-    );
-  }
-
   return (
     <div className="relative flex flex-col items-center justify-center w-full aspect-[3/2] border-2 border-dashed rounded-lg p-6 text-center hover:border-primary transition-colors">
       <label
