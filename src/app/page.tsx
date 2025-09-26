@@ -13,34 +13,17 @@ const DEFAULT_HEADLINE = "Unlock Your Potential";
 const DEFAULT_SUBHEADLINE = "State-of-the-art facilities, expert trainers, and a supportive community to help you triumph.";
 
 async function HeroContent() {
-  let headline = DEFAULT_HEADLINE;
-  let subHeadline = DEFAULT_SUBHEADLINE;
-
-  try {
-    const [headlineResult, subHeadlineResult] = await Promise.all([
-      getDynamicIncentiveHeadline().catch(e => {
-        console.error('Failed to get headline:', e);
-        return { headline: DEFAULT_HEADLINE };
-      }),
-      getHeroSubHeadline().catch(e => {
-        console.error('Failed to get sub-headline:', e);
-        return { subHeadline: DEFAULT_SUBHEADLINE };
-      }),
-    ]);
-    
-    headline = headlineResult.headline;
-    subHeadline = subHeadlineResult.subHeadline;
-    
-  } catch (error) {
-    console.error('Error fetching hero content:', error);
-  }
+  const [headlineResult, subHeadlineResult] = await Promise.all([
+    getDynamicIncentiveHeadline(),
+    getHeroSubHeadline(),
+  ]);
 
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
   return (
     <HeroSection
-      headline={headline}
-      subHeadline={subHeadline}
+      headline={headlineResult.headline}
+      subHeadline={subHeadlineResult.subHeadline}
       imageUrl={heroImage?.imageUrl}
     />
   );

@@ -14,8 +14,15 @@ const HeroSubHeadlineOutputSchema = z.object({
 });
 export type HeroSubHeadlineOutput = z.infer<typeof HeroSubHeadlineOutputSchema>;
 
+const DEFAULT_SUBHEADLINE = "State-of-the-art facilities, expert trainers, and a supportive community to help you triumph.";
+
 export async function getHeroSubHeadline(): Promise<HeroSubHeadlineOutput> {
-  return heroSubHeadlineFlow();
+  try {
+    return await heroSubHeadlineFlow();
+  } catch (error) {
+    console.error('Error in heroSubHeadlineFlow:', error);
+    return { subHeadline: DEFAULT_SUBHEADLINE };
+  }
 }
 
 const prompt = ai.definePrompt({
