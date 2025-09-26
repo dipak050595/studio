@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A modern gym with various workout equipment.",
-      "imageUrl": "https://images.unsplash.com/photo-1578874691223-64558a3ca096?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxneW0lMjBlcXVpcG1lbnR8ZW58MHx8fHwxNzU4ODEzNzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "gym equipment"
+      "description": "A modern, well-equipped gym with a clean and spacious layout.",
+      "imageUrl": "https://images.unsplash.com/photo-15802614-b15392751598?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8Z3ltJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NjM0MTE4MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gym background"
     },
     {
       "id": "about-main",
