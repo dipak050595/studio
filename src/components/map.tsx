@@ -7,18 +7,18 @@ import {
 } from '@vis.gl/react-google-maps';
 import { MapPin } from 'lucide-react';
 
-const position = { lat: 40.712776, lng: -74.005974 }; // New York City
+const position = { lat: 28.5739, lng: 77.3553 }; // Noida Sector 47
 
 export function Map() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
-  if (!apiKey) {
+  if (!apiKey || apiKey === "YOUR_GOOGLE_MAPS_API_KEY") {
     return (
       <div className="flex h-full min-h-[400px] w-full items-center justify-center rounded-lg bg-muted">
         <div className="text-center text-muted-foreground">
           <p className="font-semibold">Map could not be loaded.</p>
           <p className="text-sm">
-            Google Maps API Key is missing.
+            Google Maps API Key is missing or invalid.
           </p>
         </div>
       </div>
