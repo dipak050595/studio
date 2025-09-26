@@ -8,9 +8,9 @@
     },
     {
       "id": "about-1",
-      "description": "A woman being assisted by a personal trainer in a gym.",
-      "imageUrl": "https://storage.googleapis.com/gweb-aip-dev.appspot.com/users/default/images/e7a3c3f2-1a48-436f-846f-c1f36a8e32c5.jpeg",
-      "imageHint": "woman personal trainer"
+      "description": "A portrait of Vivek Prakash, the founder of FITNMOVE.",
+      "imageUrl": "/about-vivek.jpeg",
+      "imageHint": "founder portrait"
     },
     {
       "id": "about-2",
