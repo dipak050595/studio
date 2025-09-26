@@ -9,11 +9,23 @@ import TrainersSection from '@/components/sections/trainers';
 import { Suspense } from 'react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
+const DEFAULT_HEADLINE = "Unlock Your Potential";
+const DEFAULT_SUBHEADLINE = "State-of-the-art facilities, expert trainers, and a supportive community to help you triumph.";
+
 async function HeroContent() {
-  const [{ headline }, { subHeadline }] = await Promise.all([
+  const [headlineResult, subHeadlineResult] = await Promise.allSettled([
     getDynamicIncentiveHeadline(),
     getHeroSubHeadline(),
   ]);
+
+  const headline =
+    headlineResult.status === 'fulfilled'
+      ? headlineResult.value.headline
+      : DEFAULT_HEADLINE;
+  const subHeadline =
+    subHeadlineResult.status === 'fulfilled'
+      ? subHeadlineResult.value.subHeadline
+      : DEFAULT_SUBHEADLINE;
 
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
@@ -30,8 +42,8 @@ function HeroSkeleton() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   return (
     <HeroSection
-      headline="Unlock Your Potential"
-      subHeadline="State-of-the-art facilities, expert trainers, and a supportive community to help you triumph."
+      headline={DEFAULT_HEADLINE}
+      subHeadline={DEFAULT_SUBHEADLINE}
       imageUrl={heroImage?.imageUrl}
     />
   );
