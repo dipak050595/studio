@@ -8,24 +8,26 @@ type HeroSectionProps = {
   headline: string;
   subHeadline: string;
   imageUrl?: string;
+  children?: React.ReactNode;
 };
 
 export default function HeroSection({
   headline,
   subHeadline,
   imageUrl,
+  children,
 }: HeroSectionProps) {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   return (
     <section className="relative h-[80vh] min-h-[600px] w-full overflow-hidden">
-      {imageUrl && heroImage && (
+      {imageUrl && (
         <Image
           src={imageUrl}
-          alt={heroImage.description}
+          alt={heroImage?.description || 'Hero background image'}
           fill
           className="object-cover"
           priority
-          data-ai-hint={heroImage.imageHint}
+          data-ai-hint={heroImage?.imageHint}
         />
       )}
       <div className="absolute inset-0 bg-black/60" />
@@ -48,6 +50,7 @@ export default function HeroSection({
           </div>
         </div>
       </div>
+       {children && <div className="absolute bottom-4 right-4 z-20">{children}</div>}
     </section>
   );
 }

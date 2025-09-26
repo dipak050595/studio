@@ -2,12 +2,12 @@ import { getDynamicIncentiveHeadline } from '@/ai/flows/dynamic-incentive-headli
 import { getHeroSubHeadline } from '@/ai/flows/hero-sub-headline';
 import AboutSection from '@/components/sections/about';
 import ContactSection from '@/components/sections/contact';
+import { EditableHeroSection } from '@/components/sections/editable-hero-section';
 import FeedbackSection from '@/components/sections/feedback';
-import HeroSection from '@/components/sections/hero';
 import ServicesSection from '@/components/sections/services';
 import TrainersSection from '@/components/sections/trainers';
-import { Suspense } from 'react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Suspense } from 'react';
 
 const DEFAULT_HEADLINE = "Unlock Your Potential";
 const DEFAULT_SUBHEADLINE = "State-of-the-art facilities, expert trainers, and a supportive community to help you triumph.";
@@ -21,7 +21,7 @@ async function HeroContent() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
   return (
-    <HeroSection
+    <EditableHeroSection
       headline={headlineResult.headline}
       subHeadline={subHeadlineResult.subHeadline}
       imageUrl={heroImage?.imageUrl}
@@ -32,7 +32,7 @@ async function HeroContent() {
 function HeroSkeleton() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   return (
-    <HeroSection
+    <EditableHeroSection
       headline={DEFAULT_HEADLINE}
       subHeadline={DEFAULT_SUBHEADLINE}
       imageUrl={heroImage?.imageUrl}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, ChangeEvent } from 'react';
+import { useState, useRef, ChangeEvent, useCallback } from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -8,9 +8,24 @@ import { Input } from '@/components/ui/input';
 import { Upload, X } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
-export default function ImageUploader() {
-  const [preview, setPreview] = useState<string | null>(null);
-  const [file, setFile] = useState<File | null>(null);
+type ImageUploaderProps = {
+  onImageUpload: (dataUrl: string | null) => void;
+  cardTitle?: string;
+  className?: string;
+  width?: number;
+  height?: number;
+  initialPreview?: string | null;
+};
+
+export default function ImageUploader({
+  onImageUpload,
+  cardTitle = 'Upload Your Image',
+  className,
+  width,
+  height,
+  initialPreview,
+}: ImageUploaderProps) {
+  const [preview, setPreview] = useState<string | null>(initialPreview || null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
@@ -25,10 +40,11 @@ export default function ImageUploader() {
         });
         return;
       }
-      setFile(selectedFile);
       const reader = new FileReader();
       reader.onloadend = () => {
-        setPreview(reader.result as string);
+        const result = reader.result as string;
+        setPreview(result);
+        onImageUpload(result);
       };
       reader.readAsDataURL(selectedFile);
     }
@@ -38,23 +54,23 @@ export default function ImageUploader() {
     fileInputRef.current?.click();
   };
 
-  const handleRemoveImage = () => {
+  const handleRemoveImage = useCallback(() => {
     setPreview(null);
-    setFile(null);
+    onImageUpload(null);
     if(fileInputRef.current) {
         fileInputRef.current.value = '';
     }
-  }
+  }, [onImageUpload]);
 
   if (preview) {
     return (
-        <div className="relative w-full max-w-xl mx-auto group">
+        <div className={`relative w-full mx-auto group ${className}`}>
             <Image
-            src={preview}
-            alt="Uploaded preview"
-            width={600}
-            height={400}
-            className="object-contain rounded-lg"
+              src={preview}
+              alt="Uploaded preview"
+              width={width || 600}
+              height={height || 400}
+              className="object-contain rounded-lg"
             />
             <Button
                 variant="destructive"
@@ -70,9 +86,9 @@ export default function ImageUploader() {
   }
 
   return (
-    <Card className="w-full max-w-xl mx-auto">
+    <Card className={`w-full max-w-xl mx-auto ${className}`}>
       <CardHeader>
-        <CardTitle>Upload Your Image</CardTitle>
+        <CardTitle>{cardTitle}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         <div

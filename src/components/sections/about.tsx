@@ -1,3 +1,5 @@
+'use client';
+
 import ImageUploader from '../image-uploader';
 
 export default function AboutSection() {
@@ -38,9 +40,9 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="fade-in-up grid grid-cols-1 md:grid-cols-3 gap-4">
-            <ImageUploader />
-            <ImageUploader />
-            <ImageUploader />
+            <ImageUploader onImageUpload={() => {}} />
+            <ImageUploader onImageUpload={() => {}} />
+            <ImageUploader onImageUpload={() => {}} />
           </div>
         </div>
       </div>
