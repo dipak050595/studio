@@ -1,31 +1,28 @@
 'use client';
 
-import { useState } from 'react';
-import ImageUploader from '../image-uploader';
-import { Button } from '../ui/button';
-import { Trash2 } from 'lucide-react';
 import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const aboutImages = [
+  'about-main',
+  'about-2',
+  'trainer-1',
+  'trainer-2',
+  'trainer-3',
+  'trainer-4',
+];
 
 export default function AboutSection() {
-  const [images, setImages] = useState<string[]>([]);
-
-  const handleImageUpload = (dataUrl: string | null) => {
-    if (dataUrl) {
-      setImages((prevImages) => [...prevImages, dataUrl]);
-    }
-  };
-
-  const handleRemoveImage = (index: number) => {
-    setImages((prevImages) => prevImages.filter((_, i) => i !== index));
-  };
-
+  const images = PlaceHolderImages.filter((img) =>
+    aboutImages.includes(img.id)
+  );
   return (
     <section id="about" className="section-padding bg-card">
       <div className="container">
-        <div className="grid gap-12 lg:grid-cols-1 lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col justify-center space-y-6 fade-in-up">
-            <div className="space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center">
                 About FITNMOVE
               </h2>
               <div className="mx-auto max-w-3xl">
@@ -56,35 +53,20 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="fade-in-up space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {images.map((src, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {images.map((image, index) => (
                 <div key={index} className="relative group">
                   <Image
-                    src={src}
-                    alt={`Uploaded image ${index + 1}`}
+                    src={image.imageUrl}
+                    alt={image.description}
+                    data-ai-hint={image.imageHint}
                     width={600}
                     height={400}
                     className="object-cover rounded-lg w-full aspect-[3/2]"
                   />
-                  <Button
-                    variant="destructive"
-                    size="icon"
-                    className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                    onClick={() => handleRemoveImage(index)}
-                  >
-                    <Trash2 />
-                    <span className="sr-only">Remove image</span>
-                  </Button>
                 </div>
               ))}
             </div>
-            {images.length < 6 && (
-                <ImageUploader
-                    onImageUpload={handleImageUpload}
-                    cardTitle="Upload an image"
-                    showPreview={false}
-                />
-            )}
           </div>
         </div>
       </div>
