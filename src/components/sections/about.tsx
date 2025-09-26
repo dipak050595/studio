@@ -37,7 +37,9 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          <div className="fade-in-up">
+          <div className="fade-in-up grid grid-cols-1 md:grid-cols-3 gap-4">
+            <ImageUploader />
+            <ImageUploader />
             <ImageUploader />
           </div>
         </div>
