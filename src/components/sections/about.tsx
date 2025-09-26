@@ -1,28 +1,31 @@
 'use client';
 
+import { useState } from 'react';
+import ImageUploader from '@/components/image-uploader';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-
-const aboutImages = [
-  'about-main',
-  'about-2',
-  'trainer-1',
-  'trainer-2',
-  'trainer-3',
-  'trainer-4',
-];
 
 export default function AboutSection() {
-  const images = PlaceHolderImages.filter((img) =>
-    aboutImages.includes(img.id)
+  const [uploadedImages, setUploadedImages] = useState<(string | null)[]>(
+    Array(6).fill(null)
   );
+
+  const handleImageUpload = (
+    index: number,
+    field: string,
+    value: string
+  ) => {
+    const newImages = [...uploadedImages];
+    newImages[index] = value;
+    setUploadedImages(newImages);
+  };
+
   return (
     <section id="about" className="section-padding bg-card">
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col justify-center space-y-6 fade-in-up">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center">
+            <div className="space-y-4 text-center">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 About FITNMOVE
               </h2>
               <div className="mx-auto max-w-3xl">
@@ -54,18 +57,34 @@ export default function AboutSection() {
           </div>
           <div className="fade-in-up space-y-4">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {images.map((image, index) => (
-                <div key={index} className="relative group">
-                  <Image
-                    src={image.imageUrl}
-                    alt={image.description}
-                    data-ai-hint={image.imageHint}
-                    width={600}
-                    height={400}
-                    className="object-cover rounded-lg w-full aspect-[3/2]"
+              {uploadedImages.map((imageUrl, index) =>
+                imageUrl ? (
+                  <div key={index} className="relative group">
+                    <Image
+                      src={imageUrl}
+                      alt={`Uploaded image ${index + 1}`}
+                      width={600}
+                      height={400}
+                      className="object-cover rounded-lg w-full aspect-[3/2]"
+                    />
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <button
+                        onClick={() => handleImageUpload(index, 'imageUrl', '')}
+                        className="text-white bg-red-500 rounded-full p-2"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <ImageUploader
+                    key={index}
+                    onImageUpload={(field, value) =>
+                      handleImageUpload(index, field, value)
+                    }
                   />
-                </div>
-              ))}
+                )
+              )}
             </div>
           </div>
         </div>
