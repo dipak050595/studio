@@ -7,10 +7,10 @@
       "imageHint": "gym equipment"
     },
     {
-      "id": "about-1",
-      "description": "A portrait of Vivek Prakash, the founder of FITNMOVE.",
-      "imageUrl": "/about-vivek.jpeg",
-      "imageHint": "founder portrait"
+      "id": "about-main",
+      "description": "A trainer assisting a woman with her workout.",
+      "imageUrl": "/image-3.jpeg",
+      "imageHint": "personal training"
     },
     {
       "id": "about-2",

@@ -1,6 +1,8 @@
 import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function AboutSection() {
+  const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-main');
   return (
     <section id="about" className="section-padding bg-card">
       <div className="container">
@@ -36,14 +38,16 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="fade-in-up">
-            <Image
-              src="/about-vivek.jpeg"
-              alt="A portrait of Vivek Prakash, the founder of FITNMOVE."
-              width={600}
-              height={600}
-              className="w-full h-auto object-cover rounded-lg"
-              data-ai-hint="founder portrait"
-            />
+            {aboutImage && (
+              <Image
+                src={aboutImage.imageUrl}
+                alt={aboutImage.description}
+                width={600}
+                height={600}
+                className="w-full h-auto object-cover rounded-lg"
+                data-ai-hint={aboutImage.imageHint}
+              />
+            )}
           </div>
         </div>
       </div>
