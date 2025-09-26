@@ -1,16 +1,11 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const aboutImages = [
-  PlaceHolderImages.find((img) => img.id === 'about-1'),
-  PlaceHolderImages.find((img) => img.id === 'about-2'),
-].filter(Boolean) as (typeof PlaceHolderImages)[0][];
-
 export default function AboutSection() {
   return (
     <section id="about" className="section-padding bg-card">
       <div className="container">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-1 lg:gap-16">
           <div className="flex flex-col justify-center space-y-6 fade-in-up">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -40,19 +35,6 @@ export default function AboutSection() {
                 Let’s move towards a healthier tomorrow, together!
               </p>
             </div>
-          </div>
-          <div className="grid grid-cols-1 grid-rows-2 gap-4 fade-in-up">
-            {aboutImages.map((image, index) => (
-              <Image
-                key={index}
-                src={image.imageUrl}
-                alt={image.description}
-                data-ai-hint={image.imageHint}
-                width={600}
-                height={400}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            ))}
           </div>
         </div>
       </div>
