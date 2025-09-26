@@ -2,21 +2,45 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A person holding a heavy dumbbell in a gym setting, ready to work out.",
+      "description": "A person holding a heavy dumbbell in a gym setting, ready to work out. This is the main background image for the hero section.",
       "imageUrl": "https://images.unsplash.com/photo-1581009137042-c552b485697a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "gym workout"
     },
     {
-      "id": "about-main",
-      "description": "Group of people in a fitness class with an instructor.",
-      "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "about-image-1",
+      "description": "First image for the 'About' section gallery.",
+      "imageUrl": "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmaXRuZXNzJTIwY2xhc3N8ZW58MHx8fHwxNzU4OTI1NzUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fitness class"
     },
     {
-      "id": "about-2",
-      "description": "A fit senior woman stretching outdoors.",
-      "imageUrl": "https://images.unsplash.com/photo-1619261644391-d352597f804c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "about-image-2",
+      "description": "Second image for the 'About' section gallery.",
+      "imageUrl": "https://images.unsplash.com/photo-1615794239747-49e7d398a930?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzZW5pb3IlMjBzdHJldGNoaW5nfGVufDB8fHx8MTc1ODkyNTc1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "senior stretching"
+    },
+    {
+      "id": "about-image-3",
+      "description": "Third image for the 'About' section gallery.",
+      "imageUrl": "https://images.unsplash.com/photo-1656948021708-45ffe0d4ffb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMHRyYWluaW5nfGVufDB8fHx8MTc1ODgzNDc2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman training"
+    },
+    {
+      "id": "about-image-4",
+      "description": "Fourth image for the 'About' section gallery.",
+      "imageUrl": "https://images.unsplash.com/photo-1597076545399-91a3ff0e71b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxneW0lMjBpbnRlcmlvcnxlbnwwfHx8fDE3NTg5MjU3NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gym interior"
+    },
+    {
+      "id": "about-image-5",
+      "description": "Fifth image for the 'About' section gallery.",
+      "imageUrl": "https://images.unsplash.com/photo-1606756790138-261d2b21cd75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxoZWFsdGh5JTIwZm9vZHxlbnwwfHx8fDE3NTg4MzQ1OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "healthy food"
+    },
+    {
+      "id": "about-image-6",
+      "description": "Sixth image for the 'About' section gallery.",
+      "imageUrl": "https://images.unsplash.com/photo-1607962837359-5e7e89f86776?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm91cCUyMHdvcmtvdXR8ZW58MHx8fHwxNzU4OTI1NzUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "group workout"
     },
     {
       "id": "trainer-1",

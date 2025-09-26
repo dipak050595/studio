@@ -1,24 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-import ImageUploader from '@/components/image-uploader';
 import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function AboutSection() {
-  const [uploadedImages, setUploadedImages] = useState<(string | null)[]>(
-    Array(6).fill(null)
-  );
-
-  const handleImageUpload = (
-    index: number,
-    field: string,
-    value: string
-  ) => {
-    const newImages = [...uploadedImages];
-    newImages[index] = value;
-    setUploadedImages(newImages);
-  };
-
+  const aboutImages = PlaceHolderImages.filter(img => img.id.startsWith('about-image-'));
+  
   return (
     <section id="about" className="section-padding bg-card">
       <div className="container">
@@ -57,34 +44,18 @@ export default function AboutSection() {
           </div>
           <div className="fade-in-up space-y-4">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {uploadedImages.map((imageUrl, index) =>
-                imageUrl ? (
-                  <div key={index} className="relative group">
-                    <Image
-                      src={imageUrl}
-                      alt={`Uploaded image ${index + 1}`}
-                      width={600}
-                      height={400}
-                      className="object-cover rounded-lg w-full aspect-[3/2]"
-                    />
-                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <button
-                        onClick={() => handleImageUpload(index, 'imageUrl', '')}
-                        className="text-white bg-red-500 rounded-full p-2"
-                      >
-                        Remove
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  <ImageUploader
-                    key={index}
-                    onImageUpload={(field, value) =>
-                      handleImageUpload(index, field, value)
-                    }
+              {aboutImages.map((image) => (
+                <div key={image.id} className="relative group">
+                  <Image
+                    src={image.imageUrl}
+                    alt={image.description}
+                    width={600}
+                    height={400}
+                    className="object-cover rounded-lg w-full aspect-[3/2]"
+                    data-ai-hint={image.imageHint}
                   />
-                )
-              )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
