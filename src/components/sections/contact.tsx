@@ -41,23 +41,17 @@ export default function ContactSection() {
                 <div className="flex items-start gap-3">
                   <MapPinIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <p className="text-muted-foreground">
-                    123 Fitness Ave, FITNMOVE City, 10001
+                    2nd floor A-236, Sector 47, Noida U.P. 201301
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 flex-shrink-0 text-primary" />
-                  <p className="text-muted-foreground">(123) 456-7890</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 flex-shrink-0 text-primary" />
-                  <p className="text-muted-foreground">
-                    hello@fitnmove.fitness
-                  </p>
+                  <p className="text-muted-foreground">+91-9664476878</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <WhatsAppIcon className="h-5 w-5 flex-shrink-0 text-primary" />
                   <Link
-                    href="https://wa.me/11234567890"
+                    href="https://wa.me/919664476878"
                     target="_blank"
                     className="text-muted-foreground hover:text-primary"
                   >
@@ -66,15 +60,6 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <h4 className="font-semibold">Opening Hours</h4>
-                <p className="text-muted-foreground">
-                  <strong>Mon - Fri:</strong> 5:00 AM - 11:00 PM
-                </p>
-                <p className="text-muted-foreground">
-                  <strong>Sat - Sun:</strong> 7:00 AM - 9:00 PM
-                </p>
-              </div>
             </div>
           </div>
         </div>
