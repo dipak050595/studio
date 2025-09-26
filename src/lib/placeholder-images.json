@@ -8,44 +8,44 @@
     },
     {
       "id": "about-1",
-      "description": "A woman in a yoga pose, looking serene and focused.",
-      "imageUrl": "https://picsum.photos/seed/hero2/600/400",
-      "imageHint": "woman yoga"
+      "description": "Group of people in a high-energy fitness class.",
+      "imageUrl": "https://images.unsplash.com/photo-1588286840104-8957b019727f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwY2xhc3N8ZW58MHx8fHwxNzU4ODA0MzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fitness class"
     },
     {
       "id": "about-2",
-      "description": "A woman in athletic wear doing a bicep curl with a dumbbell.",
-      "imageUrl": "https://picsum.photos/seed/about2/600/400",
-      "imageHint": "woman dumbbell"
+      "description": "A personal trainer assisting a client with their form.",
+      "imageUrl": "https://images.unsplash.com/photo-1536922246289-88c42f957773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uYWwlMjB0cmFpbmVyfGVufDB8fHx8MTc1ODgwNDg1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "personal trainer"
     },
     {
       "id": "about-3",
-      "description": "A man lifting a heavy barbell, showing strength and determination.",
-      "imageUrl": "https://picsum.photos/seed/about3/600/400",
-      "imageHint": "man lifting"
+      "description": "A modern and clean gym interior with various equipment.",
+      "imageUrl": "https://images.unsplash.com/photo-1597076545399-91a3ff0e71b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxneW0lMjBpbnRlcmlvcnxlbnwwfHx8fDE3NTg4MzUxNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gym interior"
     },
     {
       "id": "trainer-1",
       "description": "A senior man on a treadmill listening to a trainer.",
-      "imageUrl": "https://picsum.photos/seed/trainer1/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1742316027363-9b3d6501715d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2VuaW9yJTIwZml0bmVzc3xlbnwwfHx8fDE3NTg4ODQ4ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "senior fitness"
     },
     {
       "id": "trainer-2",
       "description": "A girl concentrating while lifting a dumbbell.",
-      "imageUrl": "https://picsum.photos/seed/trainer2/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1718633587101-77b9e0634be1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnaXJsJTIwZHVtYmJlbGx8ZW58MHx8fHwxNzU4ODg0ODg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "girl dumbbell"
     },
     {
       "id": "trainer-3",
       "description": "A trainer demonstrating an exercise to a small group.",
-      "imageUrl": "https://picsum.photos/seed/trainer3/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1594750170036-022d6e8b1822?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cmFpbmVyJTIwZXhwbGFpbmluZ3xlbnwwfHx8fDE3NTg4ODQ4ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "trainer explaining"
     },
     {
       "id": "trainer-4",
       "description": "A senior woman doing a seated row exercise.",
-      "imageUrl": "https://picsum.photos/seed/trainer4/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1716367840407-f9414a84b325?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzZW5pb3IlMjB3b3Jrb3V0fGVufDB8fHx8MTc1ODg4NDg4NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "senior workout"
     }
   ]
