@@ -1,8 +1,10 @@
+import Image from 'next/image';
+
 export default function AboutSection() {
   return (
     <section id="about" className="section-padding bg-card">
       <div className="container">
-        <div className="grid gap-12 lg:grid-cols-1 lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col justify-center space-y-6 fade-in-up">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -32,6 +34,16 @@ export default function AboutSection() {
                 Let’s move towards a healthier tomorrow, together!
               </p>
             </div>
+          </div>
+          <div className="fade-in-up flex items-center justify-center">
+            <Image
+              src="https://picsum.photos/seed/senior-yoga/600/750"
+              alt="A candid, warm photograph of a graceful Indian grandmother in her late 70s, with silver hair tied in a bun, wearing a simple cotton sari. She is seated on a yoga mat, smiling gently as a young, supportive female fitness trainer in athletic wear gently guides her into a gentle seated hamstring stretch. The scene is set in a sunlit living room with traditional Indian decor. Soft, natural morning light streams through the window, creating a serene and affectionate atmosphere. Focus on the connection between the two women and the grandmother's expression of quiet determination."
+              width={600}
+              height={750}
+              className="rounded-lg object-cover shadow-lg"
+              data-ai-hint="senior fitness"
+            />
           </div>
         </div>
       </div>
