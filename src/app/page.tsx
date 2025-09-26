@@ -1,5 +1,6 @@
 import { getDynamicIncentiveHeadline } from '@/ai/flows/dynamic-incentive-headline';
 import { getHeroSubHeadline } from '@/ai/flows/hero-sub-headline';
+import { getHeroVideo } from '@/ai/flows/generate-hero-video';
 import AboutSection from '@/components/sections/about';
 import ContactSection from '@/components/sections/contact';
 import { EditableHeroSection } from '@/components/sections/editable-hero-section';
@@ -13,9 +14,10 @@ const DEFAULT_HEADLINE = "Unlock Your Potential";
 const DEFAULT_SUBHEADLINE = "State-of-the-art facilities, expert trainers, and a supportive community to help you triumph.";
 
 async function HeroContent() {
-  const [headlineResult, subHeadlineResult] = await Promise.all([
+  const [headlineResult, subHeadlineResult, videoResult] = await Promise.all([
     getDynamicIncentiveHeadline(),
     getHeroSubHeadline(),
+    getHeroVideo(),
   ]);
 
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
@@ -25,6 +27,7 @@ async function HeroContent() {
       headline={headlineResult.headline}
       subHeadline={subHeadlineResult.subHeadline}
       imageUrl={heroImage?.imageUrl}
+      videoUrl={videoResult.videoUrl}
     />
   );
 }

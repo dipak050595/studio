@@ -8,12 +8,14 @@ type EditableHeroSectionProps = {
   headline: string;
   subHeadline: string;
   imageUrl?: string;
+  videoUrl?: string;
 };
 
 export function EditableHeroSection({
   headline,
   subHeadline,
   imageUrl: initialImageUrl,
+  videoUrl,
 }: EditableHeroSectionProps) {
   const [imageUrl, setImageUrl] = useState(initialImageUrl);
 
@@ -22,6 +24,7 @@ export function EditableHeroSection({
       headline={headline}
       subHeadline={subHeadline}
       imageUrl={imageUrl}
+      videoUrl={videoUrl}
     >
       <HeroImageUploader onImageUpload={setImageUrl} />
     </HeroSection>

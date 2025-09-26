@@ -40,34 +40,39 @@ const generateHeroVideoFlow = ai.defineFlow(
     outputSchema: HeroVideoOutputSchema,
   },
   async () => {
-    let {operation} = await ai.generate({
-      model: googleAI.model('veo-2.0-generate-001'),
-      prompt: 'A cinematic shot of a bustling gym with people working out.',
-      config: {
-        durationSeconds: 7,
-        aspectRatio: '16:9',
-      },
-    });
+    try {
+      let {operation} = await ai.generate({
+        model: googleAI.model('veo-2.0-generate-001'),
+        prompt: 'A cinematic shot of a bustling gym with people working out.',
+        config: {
+          durationSeconds: 7,
+          aspectRatio: '16:9',
+        },
+      });
 
-    if (!operation) {
-      throw new Error('Expected the model to return an operation');
-    }
+      if (!operation) {
+        throw new Error('Expected the model to return an operation');
+      }
 
-    while (!operation.done) {
-      operation = await ai.checkOperation(operation);
-      await new Promise(resolve => setTimeout(resolve, 5000));
-    }
+      while (!operation.done) {
+        operation = await ai.checkOperation(operation);
+        await new Promise(resolve => setTimeout(resolve, 5000));
+      }
 
-    if (operation.error) {
-      throw new Error('failed to generate video: ' + operation.error.message);
-    }
+      if (operation.error) {
+        throw new Error('failed to generate video: ' + operation.error.message);
+      }
 
-    const video = operation.output?.message?.content.find(p => !!p.media);
-    if (!video) {
-      throw new Error('Failed to find the generated video');
+      const video = operation.output?.message?.content.find(p => !!p.media);
+      if (!video) {
+        throw new Error('Failed to find the generated video');
+      }
+      const videoUrl = await downloadVideoAsDataUrl(video);
+      return {videoUrl};
+    } catch (err) {
+      console.error(err);
+      return { videoUrl: '' };
     }
-    const videoUrl = await downloadVideoAsDataUrl(video);
-    return {videoUrl};
   }
 );
 

@@ -8,6 +8,7 @@ type HeroSectionProps = {
   headline: string;
   subHeadline: string;
   imageUrl?: string;
+  videoUrl?: string;
   children?: React.ReactNode;
 };
 
@@ -15,20 +16,32 @@ export default function HeroSection({
   headline,
   subHeadline,
   imageUrl,
+  videoUrl,
   children,
 }: HeroSectionProps) {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   return (
     <section className="relative h-[80vh] min-h-[600px] w-full overflow-hidden">
-      {imageUrl && (
-        <Image
-          src={imageUrl}
-          alt={heroImage?.description || 'Hero background image'}
-          fill
-          className="object-cover"
-          priority
-          data-ai-hint={heroImage?.imageHint}
+      {videoUrl ? (
+        <video
+          src={videoUrl}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
         />
+      ) : (
+        imageUrl && (
+          <Image
+            src={imageUrl}
+            alt={heroImage?.description || 'Hero background image'}
+            fill
+            className="object-cover"
+            priority
+            data-ai-hint={heroImage?.imageHint}
+          />
+        )
       )}
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex h-full items-center justify-center text-center">
