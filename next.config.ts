@@ -38,6 +38,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.thebasementbuilders.ca',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
