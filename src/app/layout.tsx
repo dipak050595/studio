@@ -5,7 +5,7 @@ import PageHeader from '@/components/page-header';
 import PageFooter from '@/components/page-footer';
 
 export const metadata: Metadata = {
-  title: 'FITNMOVE Fitness',
+  title: 'FITNMOVE',
   description: 'Unlock Your Potential. Your fitness journey starts here.',
 };
 
