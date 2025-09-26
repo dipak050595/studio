@@ -1,3 +1,5 @@
+import ImageUploader from '../image-uploader';
+
 export default function AboutSection() {
   return (
     <section id="about" className="section-padding bg-card">
@@ -34,6 +36,9 @@ export default function AboutSection() {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="fade-in-up">
+            <ImageUploader />
           </div>
         </div>
       </div>
