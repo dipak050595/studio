@@ -37,7 +37,7 @@ export default function AboutSection() {
               </p>
             </div>
           </div>
-          <div className="fade-in-up">
+          <div className="fade-in-up flex flex-col gap-4">
             {aboutImage && (
               <Image
                 src={aboutImage.imageUrl}
@@ -48,6 +48,14 @@ export default function AboutSection() {
                 data-ai-hint={aboutImage.imageHint}
               />
             )}
+            <Image
+                src="/image-1.png"
+                alt="Additional image for the about section"
+                width={600}
+                height={600}
+                className="w-full h-auto object-cover rounded-lg"
+                data-ai-hint="fitness workout"
+              />
           </div>
         </div>
       </div>
