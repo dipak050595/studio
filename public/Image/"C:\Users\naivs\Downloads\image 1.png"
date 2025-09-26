@@ -1,1 +1,87 @@
-"image-1.png"
+// src/app/page.tsx (Server Component approach)
+import { heroSubHeadlineFlow } from '@/ai/flows/hero-sub-headline';
+
+const FALLBACK_CONTENT = "Discover amazing possibilities with our innovative solutions.";
+
+async function getHeroContent(): Promise<{ content: string; isError: boolean }> {
+  try {
+    const content = await heroSubHeadlineFlow();
+    return { content: content || FALLBACK_CONTENT, isError: false };
+  } catch (error) {
+    console.error('Hero content generation failed:', error);
+    return { content: FALLBACK_CONTENT, isError: true };
+  }
+}
+
+export default async function Home() {
+  const { content, isError } = await getHeroContent();
+
+  return (
+    <main className="container mx-auto px-4 py-8">
+      <div className="hero-section">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Welcome to Our Platform
+        </h1>
+        <h2 className="text-xl font-medium text-gray-700">
+          {content}
+        </h2>
+        {isError && (
+          <div className="mt-2 text-sm text-yellow-600 bg-yellow-50 px-3 py-2 rounded-md">
+            ⚠️ AI service temporarily unavailable - showing default content
+          </div>
+        )}
+      </div>
+    </main>
+  );
+}
+
+// Optional: Add error boundary for additional safety
+// src/components/ErrorBoundary.tsx
+'use client';
+
+import React from 'react';
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+  fallback?: React.ComponentType<{ error: Error }>;
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error?: Error;
+}
+
+export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        const FallbackComponent = this.props.fallback;
+        return <FallbackComponent error={this.state.error!} />;
+      }
+
+      return (
+        <div className="p-4 bg-red-50 border border-red-200 rounded-md">
+          <h2 className="text-red-800 font-semibold">Something went wrong</h2>
+          <p className="text-red-600 text-sm mt-1">
+            We're experiencing technical difficulties. Please try again later.
+          </p>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
