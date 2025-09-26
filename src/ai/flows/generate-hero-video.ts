@@ -18,8 +18,14 @@ export type HeroVideoOutput = z.infer<typeof HeroVideoOutputSchema>;
 
 async function downloadVideoAsDataUrl(video: MediaPart): Promise<string> {
   const fetch = (await import('node-fetch')).default;
+  // This may fail if the API key is not available in the environment.
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    throw new Error('GEMINI_API_KEY environment variable not set.');
+  }
+
   const videoDownloadResponse = await fetch(
-    `${video.media!.url}&key=${process.env.GEMINI_API_KEY}`
+    `${video.media!.url}&key=${apiKey}`
   );
   if (
     !videoDownloadResponse ||
@@ -70,7 +76,8 @@ const generateHeroVideoFlow = ai.defineFlow(
       const videoUrl = await downloadVideoAsDataUrl(video);
       return {videoUrl};
     } catch (err) {
-      console.error(err);
+      console.error('Error in generateHeroVideoFlow:', err);
+      // Return an empty URL on failure to prevent the app from crashing.
       return { videoUrl: '' };
     }
   }
