@@ -17,22 +17,20 @@ async function HeroContent() {
   let subHeadline = DEFAULT_SUBHEADLINE;
 
   try {
-    const [headlineResult, subHeadlineResult] = await Promise.allSettled([
-      getDynamicIncentiveHeadline(),
-      getHeroSubHeadline(),
+    const [headlineResult, subHeadlineResult] = await Promise.all([
+      getDynamicIncentiveHeadline().catch(e => {
+        console.error('Failed to get headline:', e);
+        return { headline: DEFAULT_HEADLINE };
+      }),
+      getHeroSubHeadline().catch(e => {
+        console.error('Failed to get sub-headline:', e);
+        return { subHeadline: DEFAULT_SUBHEADLINE };
+      }),
     ]);
-
-    if (headlineResult.status === 'fulfilled') {
-      headline = headlineResult.value.headline;
-    } else {
-      console.error('Failed to get headline:', headlineResult.reason);
-    }
-
-    if (subHeadlineResult.status === 'fulfilled') {
-      subHeadline = subHeadlineResult.value.subHeadline;
-    } else {
-      console.error('Failed to get sub-headline:', subHeadlineResult.reason);
-    }
+    
+    headline = headlineResult.headline;
+    subHeadline = subHeadlineResult.subHeadline;
+    
   } catch (error) {
     console.error('Error fetching hero content:', error);
   }
