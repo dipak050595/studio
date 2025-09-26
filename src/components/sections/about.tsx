@@ -1,8 +1,6 @@
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function AboutSection() {
-  const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-1');
   return (
     <section id="about" className="section-padding bg-card">
       <div className="container">
@@ -21,7 +19,7 @@ export default function AboutSection() {
                 population training.
               </p>
               <p className="max-w-xl text-muted-foreground md:text-lg">
-                Our mission is simple: to make fitness accessible, safe, and
+                Our mission is to make fitness accessible, safe, and
                 enjoyable for everyone, whether you’re recovering from an
                 injury, managing health conditions, or looking to build
                 strength and confidence.
@@ -38,16 +36,14 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="fade-in-up">
-            {aboutImage && (
-              <Image
-                src={aboutImage.imageUrl}
-                alt={aboutImage.description}
-                width={600}
-                height={600}
-                className="w-full h-auto object-cover rounded-lg"
-                data-ai-hint={aboutImage.imageHint}
-              />
-            )}
+            <Image
+              src="/about-vivek.jpeg"
+              alt="A portrait of Vivek Prakash, the founder of FITNMOVE."
+              width={600}
+              height={600}
+              className="w-full h-auto object-cover rounded-lg"
+              data-ai-hint="founder portrait"
+            />
           </div>
         </div>
       </div>
