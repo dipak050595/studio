@@ -17,12 +17,7 @@ export type HeroSubHeadlineOutput = z.infer<typeof HeroSubHeadlineOutputSchema>;
 const DEFAULT_SUBHEADLINE = "State-of-the-art facilities, expert trainers, and a supportive community to help you triumph.";
 
 export async function getHeroSubHeadline(): Promise<HeroSubHeadlineOutput> {
-  try {
-    return await heroSubHeadlineFlow();
-  } catch (error) {
-    console.error('Error in heroSubHeadlineFlow:', error);
-    return { subHeadline: DEFAULT_SUBHEADLINE };
-  }
+  return heroSubHeadlineFlow();
 }
 
 const prompt = ai.definePrompt({
@@ -49,7 +44,12 @@ const heroSubHeadlineFlow = ai.defineFlow(
     outputSchema: HeroSubHeadlineOutputSchema,
   },
   async () => {
-    const {output} = await prompt({});
-    return output!;
+    try {
+      const {output} = await prompt({});
+      return output!;
+    } catch (error) {
+      console.error('Error in heroSubHeadlineFlow:', error);
+      return { subHeadline: DEFAULT_SUBHEADLINE };
+    }
   }
 );

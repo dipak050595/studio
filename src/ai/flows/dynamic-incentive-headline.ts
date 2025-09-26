@@ -17,12 +17,7 @@ export type DynamicIncentiveHeadlineOutput = z.infer<typeof DynamicIncentiveHead
 const DEFAULT_HEADLINE = "Unlock Your Potential: Start Your Free Trial Today!";
 
 export async function getDynamicIncentiveHeadline(): Promise<DynamicIncentiveHeadlineOutput> {
-  try {
-    return await dynamicIncentiveHeadlineFlow();
-  } catch (error) {
-    console.error('Error in dynamicIncentiveHeadlineFlow:', error);
-    return { headline: DEFAULT_HEADLINE };
-  }
+  return dynamicIncentiveHeadlineFlow();
 }
 
 const prompt = ai.definePrompt({
@@ -45,7 +40,12 @@ const dynamicIncentiveHeadlineFlow = ai.defineFlow(
     outputSchema: DynamicIncentiveHeadlineOutputSchema,
   },
   async () => {
-    const {output} = await prompt({});
-    return output!;
+    try {
+      const {output} = await prompt({});
+      return output!;
+    } catch (error) {
+      console.error('Error in dynamicIncentiveHeadlineFlow:', error);
+      return { headline: DEFAULT_HEADLINE };
+    }
   }
 );
