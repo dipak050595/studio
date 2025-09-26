@@ -1,8 +1,6 @@
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function AboutSection() {
-  const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-main');
   return (
     <section id="about" className="section-padding bg-card">
       <div className="container">
@@ -38,24 +36,22 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="fade-in-up flex flex-col gap-4">
-            {aboutImage && (
-              <Image
-                src={aboutImage.imageUrl}
-                alt={aboutImage.description}
-                width={600}
-                height={600}
-                className="w-full h-auto object-cover rounded-lg"
-                data-ai-hint={aboutImage.imageHint}
-              />
-            )}
             <Image
-                src="/image-1.png"
-                alt="Additional image for the about section"
-                width={600}
-                height={600}
-                className="w-full h-auto object-cover rounded-lg"
-                data-ai-hint="fitness workout"
-              />
+              src="/image-3.jpeg"
+              alt="A trainer assisting a woman with her workout."
+              width={600}
+              height={600}
+              className="w-full h-auto object-cover rounded-lg"
+              data-ai-hint="personal training"
+            />
+            <Image
+              src="/image-1.png"
+              alt="Additional image for the about section"
+              width={600}
+              height={600}
+              className="w-full h-auto object-cover rounded-lg"
+              data-ai-hint="fitness workout"
+            />
           </div>
         </div>
       </div>
