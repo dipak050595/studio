@@ -2,69 +2,45 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A modern, well-equipped gym with a clean and spacious layout.",
-      "imageUrl": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "gym background"
+      "description": "A person holding a heavy dumbbell in a gym setting, ready to work out.",
+      "imageUrl": "https://images.unsplash.com/photo-1581009137042-c552b485697a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "gym workout"
     },
     {
-      "id": "about-1",
-      "description": "A trainer assisting a woman with her workout.",
-      "imageUrl": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "personal training"
+      "id": "about-main",
+      "description": "Group of people in a fitness class with an instructor.",
+      "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "fitness class"
     },
     {
       "id": "about-2",
-      "description": "A fit senior man meditating outdoors.",
-      "imageUrl": "https://images.unsplash.com/photo-1710038930918-94ea478af092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzZW5pb3IlMjBtZWRpdGF0aW9ufGVufDB8fHx8MTc1ODg4NTg3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "senior meditation"
-    },
-    {
-      "id": "about-3",
-      "description": "A senior man practicing yoga on a mat.",
-      "imageUrl": "https://images.unsplash.com/photo-1599447292180-45fd84092ef0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx5b2dhJTIwcG9zZXxlbnwwfHx8fDE3NTg4MDE1NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "yoga pose"
-    },
-    {
-      "id": "about-4",
-      "description": "Close up of a senior man in a yoga pose.",
-      "imageUrl": "https://images.unsplash.com/photo-1588040217484-7d484d97dbe4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjB5b2dhfGVufDB8fHx8MTc1ODg4NTg3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man yoga"
-    },
-    {
-      "id": "about-5",
-      "description": "A senior man doing a yoga stretch in a park.",
-      "imageUrl": "https://images.unsplash.com/photo-1706211995590-abbb5229ee24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuJTIwc3RyZXRjaGluZ3xlbnwwfHx8fDE3NTg4ODU4NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man stretching"
-    },
-    {
-      "id": "about-6",
-      "description": "A senior man meditating on a rock by the sea.",
-      "imageUrl": "https://images.unsplash.com/photo-1603166868295-4ae2cba14063?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBtZWRpdGF0aW5nfGVufDB8fHx8MTc1ODg4NTg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man meditating"
+      "description": "A fit senior woman stretching outdoors.",
+      "imageUrl": "https://images.unsplash.com/photo-1619261644391-d352597f804c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "senior stretching"
     },
     {
       "id": "trainer-1",
-      "description": "A senior man practicing yoga on a mat.",
-      "imageUrl": "https://images.unsplash.com/photo-1599447292180-45fd84092ef0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx5b2dhJTIwcG9zZXxlbnwwfHx8fDE3NTg4MDE1NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "yoga pose"
+      "description": "A smiling personal trainer standing in a gym.",
+      "imageUrl": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "personal trainer"
     },
     {
       "id": "trainer-2",
-      "description": "Close up of a senior man in a yoga pose.",
-      "imageUrl": "https://images.unsplash.com/photo-1588040217484-7d484d97dbe4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjB5b2dhfGVufDB8fHx8MTc1ODg4NTg3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man yoga"
+      "description": "A female yoga instructor in a bright studio.",
+      "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "yoga instructor"
     },
     {
       "id": "trainer-3",
-      "description": "A senior man doing a yoga stretch in a park.",
-      "imageUrl": "https://images.unsplash.com/photo-1706211995590-abbb5229ee24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuJTIwc3RyZXRjaGluZ3xlbnwwfHx8fDE3NTg4ODU4NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man stretching"
+      "description": "A male boxer wrapping his hands in a gym.",
+      "imageUrl": "https://images.unsplash.com/photo-1574680096145-f8493c950555?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "boxer training"
     },
     {
       "id": "trainer-4",
-      "description": "A senior man meditating on a rock by the sea.",
-      "imageUrl": "https://images.unsplash.com/photo-1603166868295-4ae2cba14063?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBtZWRpdGF0aW5nfGVufDB8fHx8MTc1ODg4NTg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man meditating"
+      "description": "A nutritionist smiling with a bowl of healthy food.",
+      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "healthy food"
     }
   ]
 }
