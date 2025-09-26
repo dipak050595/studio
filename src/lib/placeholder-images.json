@@ -8,21 +8,21 @@
     },
     {
       "id": "about-1",
-      "description": "Group of people in a high-energy fitness class.",
-      "imageUrl": "https://images.unsplash.com/photo-1588286840104-8957b019727f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwY2xhc3N8ZW58MHx8fHwxNzU4ODA0MzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "fitness class"
+      "description": "A senior Indian couple doing yoga together in their living room.",
+      "imageUrl": "https://images.unsplash.com/photo-1621250114881-8ac14450c765?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBvbGQlMjBjb3VwbGUlMjBmaXRuZXNzfGVufDB8fHx8MTc1ODkyNTg2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian couple fitness"
     },
     {
       "id": "about-2",
-      "description": "A personal trainer assisting a client with their form.",
-      "imageUrl": "https://images.unsplash.com/photo-1536922246289-88c42f957773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uYWwlMjB0cmFpbmVyfGVufDB8fHx8MTc1ODgwNDg1NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "personal trainer"
+      "description": "An older Indian man lifting dumbbells at home.",
+      "imageUrl": "https://images.unsplash.com/photo-1597076545399-91a3ff0e71b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxneW0lMjBpbnRlcmlvcnxlbnwwfHx8fDE3NTg4MzUxNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian man workout"
     },
     {
       "id": "about-3",
-      "description": "A modern and clean gym interior with various equipment.",
-      "imageUrl": "https://images.unsplash.com/photo-1597076545399-91a3ff0e71b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxneW0lMjBpbnRlcmlvcnxlbnwwfHx8fDE3NTg4MzUxNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "gym interior"
+      "description": "An older Indian woman stretching on a yoga mat at home.",
+      "imageUrl": "https://images.unsplash.com/photo-1619981849492-95b35c634720?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBlbGRlcmx5JTIwd29tYW4lMjB5b2dhfGVufDB8fHx8MTc1ODkyNjA3NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian woman yoga"
     },
     {
       "id": "trainer-1",
