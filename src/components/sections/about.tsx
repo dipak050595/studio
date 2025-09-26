@@ -4,7 +4,6 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 const aboutImages = [
   PlaceHolderImages.find((img) => img.id === 'about-1'),
   PlaceHolderImages.find((img) => img.id === 'about-2'),
-  PlaceHolderImages.find((img) => img.id === 'about-3'),
 ].filter(Boolean) as (typeof PlaceHolderImages)[0][];
 
 export default function AboutSection() {
@@ -42,37 +41,18 @@ export default function AboutSection() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 grid-rows-2 gap-4 fade-in-up">
-            {aboutImages[0] && (
+          <div className="grid grid-cols-1 grid-rows-2 gap-4 fade-in-up">
+            {aboutImages.map((image, index) => (
               <Image
-                src={aboutImages[0].imageUrl}
-                alt={aboutImages[0].description}
-                data-ai-hint={aboutImages[0].imageHint}
-                width={600}
-                height={400}
-                className="col-span-2 row-span-1 w-full h-full object-cover rounded-lg"
-              />
-            )}
-            {aboutImages[1] && (
-              <Image
-                src={aboutImages[1].imageUrl}
-                alt={aboutImages[1].description}
-                data-ai-hint={aboutImages[1].imageHint}
+                key={index}
+                src={image.imageUrl}
+                alt={image.description}
+                data-ai-hint={image.imageHint}
                 width={600}
                 height={400}
                 className="w-full h-full object-cover rounded-lg"
               />
-            )}
-            {aboutImages[2] && (
-              <Image
-                src={aboutImages[2].imageUrl}
-                alt={aboutImages[2].description}
-                data-ai-hint={aboutImages[2].imageHint}
-                width={600}
-                height={400}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            )}
+            ))}
           </div>
         </div>
       </div>
