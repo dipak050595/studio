@@ -78,7 +78,7 @@ export default function AboutSection() {
                 </div>
               ))}
             </div>
-            {images.length < 3 && (
+            {images.length < 6 && (
                 <ImageUploader
                     onImageUpload={handleImageUpload}
                     cardTitle="Upload an image"
