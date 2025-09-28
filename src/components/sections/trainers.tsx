@@ -19,9 +19,9 @@ const trainers = [
   },
   {
     id: 'trainer-2',
-    name: 'Maria Garcia',
-    specialization: 'Yoga & Flexibility',
-    bio: 'Maria is a certified yoga instructor who guides members towards balance, flexibility, and mindfulness.',
+    name: 'Aarushi Kumari',
+    specialization: 'Yoga, Flexibility & Gymnastics',
+    bio: "Aarushi Kumar, a state-level medalist, expertly blends yoga, flexibility, and gymnastics in her training. She designs dynamic routines that enhance mobility, build functional strength, and achieve impressive feats of flexibility. Her guidance empowers clients to unlock their body's full potential with grace and control.",
   },
   {
     id: 'trainer-3',
