@@ -1,3 +1,6 @@
+
+'use client';
+
 import {
   Card,
   CardContent,
@@ -5,6 +8,13 @@ import {
   CardHeader,
 } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 const testimonials = [
   {
@@ -34,6 +44,42 @@ const testimonials = [
     image: 'https://picsum.photos/seed/person3/100/100',
     imageHint: 'woman portrait',
   },
+  {
+    name: 'David L.',
+    avatar: 'DL',
+    title: 'Incredible Support',
+    quote:
+      'The personal trainers here are top-notch. They helped me create a plan that was perfect for my goals and abilities. I feel stronger and more confident.',
+    image: 'https://picsum.photos/seed/person4/100/100',
+    imageHint: 'man smiling',
+  },
+  {
+    name: 'Emily R.',
+    avatar: 'ER',
+    title: 'A Welcoming Atmosphere',
+    quote:
+      'As a beginner, I was nervous, but everyone was so friendly. The environment is positive and encouraging, which makes all the difference.',
+    image: 'https://picsum.photos/seed/person5/100/100',
+    imageHint: 'woman workout',
+  },
+  {
+    name: 'Chris B.',
+    avatar: 'CB',
+    title: 'Great for Rehabilitation',
+    quote:
+      'I came here for injury rehabilitation and the results have been fantastic. The trainers are knowledgeable and helped me recover safely.',
+    image: 'https://picsum.photos/seed/person6/100/100',
+    imageHint: 'man stretching',
+  },
+  {
+    name: 'Amanda G.',
+    avatar: 'AG',
+    title: 'Clean and Modern',
+    quote:
+      'The gym is always spotless and the modern equipment makes workouts enjoyable. I highly recommend FITNMOVE to anyone serious about their fitness.',
+    image: 'https://picsum.photos/seed/person7/100/100',
+    imageHint: 'woman fitness',
+  },
 ];
 
 export default function FeedbackSection() {
@@ -48,33 +94,50 @@ export default function FeedbackSection() {
             Real stories from real members. Your success is our motivation.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.name} className="flex flex-col">
-              <CardHeader className="pb-4">
-                <h3 className="font-bold text-lg">{testimonial.title}</h3>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <blockquote className="italic text-muted-foreground">
-                  "{testimonial.quote}"
-                </blockquote>
-              </CardContent>
-              <CardFooter className="pt-4">
-                <div className="flex items-center gap-4">
-                  <Avatar>
-                    <AvatarImage
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      data-ai-hint={testimonial.imageHint}
-                    />
-                    <AvatarFallback>{testimonial.avatar}</AvatarFallback>
-                  </Avatar>
-                  <p className="font-semibold">{testimonial.name}</p>
+        <Carousel
+          opts={{
+            align: 'start',
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem
+                key={index}
+                className="md:basis-1/2 lg:basis-1/3"
+              >
+                <div className="p-1">
+                  <Card className="flex h-full flex-col">
+                    <CardHeader className="pb-4">
+                      <h3 className="font-bold text-lg">{testimonial.title}</h3>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <blockquote className="italic text-muted-foreground">
+                        "{testimonial.quote}"
+                      </blockquote>
+                    </CardContent>
+                    <CardFooter className="pt-4">
+                      <div className="flex items-center gap-4">
+                        <Avatar>
+                          <AvatarImage
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            data-ai-hint={testimonial.imageHint}
+                          />
+                          <AvatarFallback>{testimonial.avatar}</AvatarFallback>
+                        </Avatar>
+                        <p className="font-semibold">{testimonial.name}</p>
+                      </div>
+                    </CardFooter>
+                  </Card>
                 </div>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );
