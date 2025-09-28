@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Dumbbell, HeartPulse, Users, Zap } from 'lucide-react';
+import { Dumbbell, HeartPulse, Users, Zap, વૃદ્ધ, Accessibility, PersonStanding } from 'lucide-react';
 
 const services = [
   {
@@ -15,22 +15,28 @@ const services = [
       'Build muscle and strength with our wide range of free weights and resistance machines.',
   },
   {
-    icon: <HeartPulse className="h-10 w-10 text-primary" />,
-    title: 'Cardio Fitness',
+    icon: <Accessibility className="h-10 w-10 text-primary" />,
+    title: 'Senior Citizens Rehabilitation',
     description:
-      'Improve your endurance and heart health with our state-of-the-art cardio equipment.',
+      'Specialized programs to improve mobility, balance, and strength for seniors.',
   },
   {
-    icon: <Users className="h-10 w-10 text-primary" />,
-    title: 'Group Classes',
+    icon: <PersonStanding className="h-10 w-10 text-primary" />,
+    title: 'Female Fitness',
     description:
-      'Join our energetic group classes, including yoga, HIIT, and spinning, led by expert instructors.',
+      'Tailored fitness plans focusing on women\'s health and wellness goals.',
   },
   {
     icon: <Zap className="h-10 w-10 text-primary" />,
-    title: 'Personal Training',
+    title: 'Power Yoga',
     description:
-      'Get one-on-one guidance and a customized workout plan from our certified personal trainers.',
+      'Dynamic yoga sessions to build strength, flexibility, and mental focus.',
+  },
+  {
+    icon: <HeartPulse className="h-10 w-10 text-primary" />,
+    title: 'Injury Rehabilitation',
+    description:
+      'Customized rehabilitation programs to help you recover from injuries and regain strength.',
   },
 ];
 
@@ -46,7 +52,7 @@ export default function ServicesSection() {
             We offer a variety of services to help you achieve your fitness goals.
           </p>
         </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Card key={service.title} className="text-center">
               <CardHeader>
