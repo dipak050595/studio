@@ -25,9 +25,9 @@ const trainers = [
   },
   {
     id: 'trainer-3',
-    name: 'David Chen',
-    specialization: 'Boxing & HIIT',
-    bio: 'A former professional boxer, David brings high-energy and discipline to his explosive workout sessions.',
+    name: 'Utkarsh Shrivastav',
+    specialization: '',
+    bio: '',
   },
   {
     id: 'trainer-4',
@@ -71,12 +71,16 @@ export default function TrainersSection() {
                 </CardHeader>
                 <CardContent className="p-6">
                   <CardTitle className="text-xl">{trainer.name}</CardTitle>
-                  <CardDescription className="mt-1">
-                    <Badge variant="secondary">{trainer.specialization}</Badge>
-                  </CardDescription>
-                  <p className="mt-4 text-sm text-muted-foreground">
-                    {trainer.bio}
-                  </p>
+                  {trainer.specialization && (
+                    <CardDescription className="mt-1">
+                      <Badge variant="secondary">{trainer.specialization}</Badge>
+                    </CardDescription>
+                  )}
+                  {trainer.bio && (
+                    <p className="mt-4 text-sm text-muted-foreground">
+                      {trainer.bio}
+                    </p>
+                  )}
                 </CardContent>
               </Card>
             );
