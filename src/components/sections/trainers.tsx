@@ -31,9 +31,9 @@ const trainers = [
   },
   {
     id: 'trainer-4',
-    name: 'Sarah Lee',
-    specialization: 'Nutrition & Wellness',
-    bio: 'Sarah is a registered dietitian who helps members create sustainable and healthy eating habits.',
+    name: 'Nitin',
+    specialization: '',
+    bio: '',
   },
 ];
 
