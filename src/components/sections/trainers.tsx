@@ -13,9 +13,9 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 const trainers = [
   {
     id: 'trainer-1',
-    name: 'Alex Johnson',
-    specialization: 'Strength & Conditioning',
-    bio: 'With over 10 years of experience, Alex specializes in building functional strength and athletic performance.',
+    name: 'Vivek Prakash',
+    specialization: 'Fitness & Rehabilitation',
+    bio: "Vivek Prakash, a Gold's Gym certified fitness trainer, specializes in strength training, female fitness, and rehabilitation for seniors and injuries. He empowers clients with tailored programs that build resilience, restore function, and boost confidence. His philosophy centers on making effective, sustainable fitness accessible to every body.",
   },
   {
     id: 'trainer-2',
