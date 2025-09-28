@@ -44,25 +44,25 @@
     },
     {
       "id": "trainer-1",
-      "description": "A smiling personal trainer standing in a gym. This is for the coach Alex Johnson.",
-      "imageUrl": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A smiling personal trainer (Alex Johnson) standing in a gym.",
+      "imageUrl": "https://i.postimg.cc/762TPDFM/image-3.jpg",
       "imageHint": "personal trainer"
     },
     {
       "id": "trainer-2",
-      "description": "A female yoga instructor in a bright studio. This is for the coach Maria Garcia.",
+      "description": "A female yoga instructor (Maria Garcia) in a bright studio.",
       "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "yoga instructor"
     },
     {
       "id": "trainer-3",
-      "description": "A male boxer wrapping his hands in a gym. This is for the coach David Chen.",
+      "description": "A male boxer (David Chen) wrapping his hands in a gym.",
       "imageUrl": "https://images.unsplash.com/photo-1574680096145-f8493c950555?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "boxer training"
     },
     {
       "id": "trainer-4",
-      "description": "A nutritionist smiling with a bowl of healthy food. This is for the coach Sarah Lee.",
+      "description": "A nutritionist (Sarah Lee) smiling with a bowl of healthy food.",
       "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "healthy food"
     }
