@@ -48,7 +48,7 @@ const heroSubHeadlineFlow = ai.defineFlow(
       const {output} = await prompt({});
       return output!;
     } catch (error) {
-      console.error('Error in heroSubHeadlineFlow:', error);
+      console.error('AI service unavailable for hero sub-headline, returning default:', error);
       return { subHeadline: DEFAULT_SUBHEADLINE };
     }
   }

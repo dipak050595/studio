@@ -44,7 +44,7 @@ const dynamicIncentiveHeadlineFlow = ai.defineFlow(
       const {output} = await prompt({});
       return output!;
     } catch (error) {
-      console.error('Error in dynamicIncentiveHeadlineFlow:', error);
+      console.error('AI service unavailable for dynamic headline, returning default:', error);
       return { headline: DEFAULT_HEADLINE };
     }
   }
