@@ -2,6 +2,7 @@
 
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -40,7 +41,7 @@ export default function PageHeader() {
     >
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <FitnmoveLogo className="h-20 w-20" />
+          <Image src="https://i.postimg.cc/1t1nC2dG/Whats-App-Image-2025-09-27-at-8-08-07-PM.jpg" alt="FITNMOVE Logo" width={80} height={80} className="h-20 w-20 object-contain" />
           <span className="text-xl font-bold bg-gradient-to-r from-[#8A2BE2] via-[#FF69B4] to-[#FFA500] text-transparent bg-clip-text">
             FITNMOVE
           </span>
@@ -76,7 +77,7 @@ export default function PageHeader() {
             <SheetContent side="left">
               <div className="flex flex-col gap-6 pt-8">
                 <Link href="/" className="mb-4 flex items-center gap-2">
-                  <FitnmoveLogo className="h-14 w-14" />
+                  <Image src="https://i.postimg.cc/1t1nC2dG/Whats-App-Image-2025-09-27-at-8-08-07-PM.jpg" alt="FITNMOVE Logo" width={56} height={56} className="h-14 w-14 object-contain" />
                   <span className="text-xl font-bold bg-gradient-to-r from-[#8A2BE2] via-[#FF69B4] to-[#FFA500] text-transparent bg-clip-text">
                     FITNMOVE
                   </span>
