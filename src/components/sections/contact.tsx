@@ -46,7 +46,9 @@ export default function ContactSection() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 flex-shrink-0 text-primary" />
-                  <p className="text-muted-foreground">+91-9664476878</p>
+                  <a href="tel:+919664476878" className="text-muted-foreground hover:text-primary">
+                    +91-9664476878
+                  </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <WhatsAppIcon className="h-5 w-5 flex-shrink-0 text-primary" />
