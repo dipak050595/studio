@@ -62,7 +62,7 @@ export default function PageHeader() {
         <div className="flex items-center gap-2">
           <Button
             asChild
-            className="hidden bg-primary text-primary-foreground hover:bg-primary/90 md:inline-flex"
+            className="hidden md:inline-flex bg-red-500 text-white hover:bg-red-600 active:bg-green-500"
           >
             <Link href="#contact-form">Book Free Trial</Link>
           </Button>
@@ -94,7 +94,7 @@ export default function PageHeader() {
                 ))}
                 <Button
                   asChild
-                  className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90"
+                  className="mt-4 bg-red-500 text-white hover:bg-red-600 active:bg-green-500"
                   size="lg"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
