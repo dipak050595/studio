@@ -18,17 +18,17 @@ import {
 
 const testimonials = [
   {
-    name: 'Jessica M.',
-    avatar: 'JM',
+    name: 'Kunal joshi (IFS)',
+    avatar: 'KJ',
     title: 'Life-Changing Experience!',
     quote:
       "Joining FITNMOVE was the best decision I've ever made for my health. The trainers are incredibly supportive and the community is so welcoming. I've seen amazing results!",
     image: 'https://picsum.photos/seed/person1/100/100',
-    imageHint: 'woman smiling',
+    imageHint: 'man smiling',
   },
   {
-    name: 'Mike P.',
-    avatar: 'MP',
+    name: 'Deepak shinde (IAS)',
+    avatar: 'DS',
     title: 'Top-Notch Facilities',
     quote:
       'The equipment is state-of-the-art and always clean. I love the variety of classes offered. It never gets boring and I always feel challenged.',
@@ -36,40 +36,40 @@ const testimonials = [
     imageHint: 'man gym',
   },
   {
-    name: 'Sarah K.',
-    avatar: 'SK',
+    name: 'Sanjay Mittal',
+    avatar: 'SM',
     title: 'More Than a Gym',
     quote:
       "It's not just a place to work out; it's a community. I've made so many friends here. Everyone is so motivating and it feels like a second home.",
     image: 'https://picsum.photos/seed/person3/100/100',
-    imageHint: 'woman portrait',
+    imageHint: 'man portrait',
   },
   {
-    name: 'David L.',
-    avatar: 'DL',
+    name: 'Rama aahuja',
+    avatar: 'RA',
     title: 'Incredible Support',
     quote:
       'The personal trainers here are top-notch. They helped me create a plan that was perfect for my goals and abilities. I feel stronger and more confident.',
     image: 'https://picsum.photos/seed/person4/100/100',
-    imageHint: 'man smiling',
+    imageHint: 'woman smiling',
   },
   {
-    name: 'Emily R.',
-    avatar: 'ER',
+    name: 'Abhijeet',
+    avatar: 'A',
     title: 'A Welcoming Atmosphere',
     quote:
       'As a beginner, I was nervous, but everyone was so friendly. The environment is positive and encouraging, which makes all the difference.',
     image: 'https://picsum.photos/seed/person5/100/100',
-    imageHint: 'woman workout',
+    imageHint: 'man workout',
   },
   {
-    name: 'Chris B.',
-    avatar: 'CB',
+    name: 'Khushi',
+    avatar: 'K',
     title: 'Great for Rehabilitation',
     quote:
       'I came here for injury rehabilitation and the results have been fantastic. The trainers are knowledgeable and helped me recover safely.',
     image: 'https://picsum.photos/seed/person6/100/100',
-    imageHint: 'man stretching',
+    imageHint: 'woman stretching',
   },
   {
     name: 'Amanda G.',
