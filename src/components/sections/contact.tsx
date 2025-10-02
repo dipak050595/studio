@@ -20,7 +20,7 @@ export default function ContactSection() {
           </div>
 
           <div className="mx-auto max-w-2xl">
-              <h3 className="mb-6 text-2xl font-bold text-center">Book a Free Trial</h3>
+              <h3 className="mb-6 text-2xl font-bold text-center">Book Free Trial</h3>
               <ContactForm />
           </div>
         </div>
