@@ -56,7 +56,7 @@ export default function HeroSection({
             <Button
               asChild
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              className="bg-red-500 text-white hover:bg-red-600 active:bg-green-500"
             >
               <Link href="#contact-form">Book a Free Trial</Link>
             </Button>
