@@ -211,7 +211,7 @@ export function ContactForm() {
               : 'bg-red-500 hover:bg-red-600'
           )}
           size="lg"
-          disabled={!form.formState.isValid || form.formState.isSubmitting}
+          disabled={form.formState.isSubmitting}
         >
           {form.formState.isSubmitting && (
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
