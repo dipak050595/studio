@@ -204,12 +204,7 @@ export function ContactForm() {
         />
         <Button
           type="submit"
-          className={cn(
-            'w-full text-white',
-            form.formState.isSubmitting
-              ? 'bg-green-500 hover:bg-green-600'
-              : 'bg-red-500 hover:bg-red-600'
-          )}
+          className="w-full bg-red-500 text-white hover:bg-green-600"
           size="lg"
           disabled={form.formState.isSubmitting}
         >
