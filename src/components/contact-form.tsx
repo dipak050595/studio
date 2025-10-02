@@ -20,6 +20,7 @@ import { bookFreeTrialAction } from '@/app/actions';
 import { Loader2 } from 'lucide-react';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Textarea } from './ui/textarea';
+import { cn } from '@/lib/utils';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -203,7 +204,12 @@ export function ContactForm() {
         />
         <Button
           type="submit"
-          className="w-full bg-red-500 text-white hover:bg-green-500"
+          className={cn(
+            'w-full text-white',
+            form.formState.isSubmitting
+              ? 'bg-green-500 hover:bg-green-600'
+              : 'bg-red-500 hover:bg-red-600'
+          )}
           size="lg"
           disabled={!form.formState.isValid || form.formState.isSubmitting}
         >
