@@ -6,13 +6,14 @@ import {
   AdvancedMarker,
 } from '@vis.gl/react-google-maps';
 import { MapPin } from 'lucide-react';
+import { Skeleton } from './ui/skeleton';
 
 const position = { lat: 28.5739, lng: 77.3553 }; // Noida Sector 47
 
 export function Map() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
-  if (!apiKey || apiKey === "YOUR_GOOGLE_MAPS_API_KEY") {
+  if (!apiKey || apiKey === 'YOUR_GOOGLE_MAPS_API_KEY') {
     return (
       <div className="flex h-full min-h-[400px] w-full items-center justify-center rounded-lg bg-muted">
         <div className="text-center text-muted-foreground">
@@ -26,7 +27,15 @@ export function Map() {
   }
 
   return (
-    <APIProvider apiKey={apiKey}>
+    <APIProvider
+      apiKey={apiKey}
+      onLoad={() => console.log('Maps API loaded.')}
+      loadingElement={
+        <div className="h-full min-h-[400px] w-full">
+          <Skeleton className="h-full w-full" />
+        </div>
+      }
+    >
       <div className="h-full min-h-[400px] w-full rounded-lg overflow-hidden">
         <GoogleMap
           defaultCenter={position}
