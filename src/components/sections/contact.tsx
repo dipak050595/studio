@@ -1,6 +1,5 @@
 import { Mail, MapPin as MapPinIcon, Phone } from 'lucide-react';
 import { ContactForm } from '../contact-form';
-import { Map } from '../map';
 import Link from 'next/link';
 import { WhatsAppIcon } from '../icons/whatsapp-icon';
 
@@ -25,43 +24,32 @@ export default function ContactSection() {
           </div>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-5 lg:gap-16 items-start" id="contact-details">
-          <div className="lg:col-span-3">
-            <div className="space-y-8">
-              <div>
-                <h3 className="mb-4 text-2xl font-bold">Our Location</h3>
-                <Map />
+        <div className="mx-auto max-w-md" id="contact-details">
+          <div className="grid gap-8 sm:grid-cols-1">
+            <div className="space-y-2">
+              <h4 className="font-semibold text-center text-2xl mb-4">Contact Details</h4>
+              <div className="flex items-start gap-3">
+                <MapPinIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                <p className="text-muted-foreground">
+                  2nd floor A-236, Sector 47, Noida U.P. 201301
+                </p>
               </div>
-            </div>
-          </div>
-          <div className="lg:col-span-2">
-            <div className="grid gap-8 sm:grid-cols-1">
-              <div className="space-y-2">
-                <h4 className="font-semibold">Contact Details</h4>
-                <div className="flex items-start gap-3">
-                  <MapPinIcon className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <p className="text-muted-foreground">
-                    2nd floor A-236, Sector 47, Noida U.P. 201301
-                  </p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 flex-shrink-0 text-primary" />
-                  <a href="tel:+919664476878" className="text-muted-foreground hover:text-primary">
-                    +91-9664476878
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <WhatsAppIcon className="h-5 w-5 flex-shrink-0 text-primary" />
-                  <Link
-                    href="https://wa.me/919664476878"
-                    target="_blank"
-                    className="text-muted-foreground hover:text-primary"
-                  >
-                    Chat with us on WhatsApp
-                  </Link>
-                </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-5 w-5 flex-shrink-0 text-primary" />
+                <a href="tel:+919664476878" className="text-muted-foreground hover:text-primary">
+                  +91-9664476878
+                </a>
               </div>
-
+              <div className="flex items-center gap-3">
+                <WhatsAppIcon className="h-5 w-5 flex-shrink-0 text-primary" />
+                <Link
+                  href="https://wa.me/919664476878"
+                  target="_blank"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  Chat with us on WhatsApp
+                </Link>
+              </div>
             </div>
           </div>
         </div>
